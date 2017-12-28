@@ -1,0 +1,2 @@
+class BoardShare < ApplicationRecord
+end
