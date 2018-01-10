@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
             id="password"
             placeholder="Password"
           />
-
+          {this.renderErrors()}
           <input className="session-button" type="submit" value="LOG IN" />
           <button className="session-button" onClick={this.demoLogin} >
             DEMO
