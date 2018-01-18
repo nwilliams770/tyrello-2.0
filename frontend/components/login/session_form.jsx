@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
       <div>
         <div className='logo'></div> 
         <div className='session--container'>
-        <h1 className='session--header'> Welcome, stranger! </h1>
+        <h1 className='session--header'> Welcome back! </h1>
         <ul className='session--bullets'>
           <li> Get more done with Tyrello </li>
           <li> Flexible prioritization </li>

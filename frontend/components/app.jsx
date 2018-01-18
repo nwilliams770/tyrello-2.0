@@ -9,6 +9,7 @@ import {
 
 import SplashPage from './splash_page/splash_page';
 import SignupContainer from './signup/signup_container';
+import SessionContainer from './login/session_form_container';
 
 
 import { AuthRoute, ProtectedRoute, UnknownRoute } from '../util/route_util';
@@ -17,6 +18,7 @@ import { AuthRoute, ProtectedRoute, UnknownRoute } from '../util/route_util';
 const App = () => (
   <div>
     <Switch>
+      <AuthRoute path='/login' component= {SessionContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
       <AuthRoute exact path='/' component={SplashPage} />
       <UnknownRoute path='/*' />
