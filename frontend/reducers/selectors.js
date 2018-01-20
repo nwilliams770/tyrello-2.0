@@ -3,6 +3,7 @@ import { values, keys } from 'lodash';
 export const selectPersonalBoards = (state) => {
   let personalIds = values(state.entities.boards.allIds.personal);
   return personalIds.map(id => (state.entities.boards.byId[id]));
+  
 };
 
 export const selectSharedBoards = (state) => {
