@@ -55,7 +55,7 @@ table {
 .bg {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.3);
-  overflow: visible;
+  overflow: hidden;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -63,19 +63,20 @@ table {
 
 .fullscreen-bg {
   position: absolute;
+  background-size: cover;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
   z-index: -50;
 }
 
 .fullscreen-bg-video {
   position: absolute;
+  background-size: cover;
   top: 50%;
   left: 30%;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100%;
   z-index: -50;
   transform: translate(-50%, -50%);
@@ -85,13 +86,22 @@ table {
   transform: translate(-50%, -50%);
 }
 
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url("http://res.cloudinary.com/nwilliams770/image/upload/v1515178866/Bee_Flower_Compressed_ds0ii6.jpg") center center/cover no-repeat;
+  }
+}
+.splash--copy {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60%;
+}
+
 .splash--h1 {
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 80px;
-  margin-left: 62%;
-  margin-top: 3%;
 }
 
 .splash--h2 {
@@ -99,23 +109,17 @@ table {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 40px;
+  margin-top: 3%;
 }
 
-.splash--body {
-  display: flex;
-  flex-direction: column;
-  margin-left: 60%;
-  margin-top: 20%;
+.splash--body > * {
+  margin-top: 2%;
+  margin-left: 2%;
   font-family: "Lato", sans-serif;
+  font-size: 24px;
   color: white;
-  align-items: center;
 }
 
-@media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url("http://res.cloudinary.com/nwilliams770/image/upload/v1515178866/Bee_Flower_Compressed_ds0ii6.jpg") center center/cover no-repeat;
-  }
-}
 .logo {
   background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_600/v1515437937/Tyrello1_pxcaqb.png");
   background-repeat: no-repeat;
@@ -130,22 +134,22 @@ table {
 }
 
 .slide-up-fade-in {
-  animation: slide-up-fade-in ease 1s;
+  animation: slide-up-fade-in ease 1.5s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
   animation-fill-mode: forwards;
   /*when the spec is finished*/
-  -webkit-animation: slide-up-fade-in ease 1s;
+  -webkit-animation: slide-up-fade-in ease 1.5s;
   -webkit-animation-iteration-count: 1;
   -webkit-transform-origin: 50% 50%;
   -webkit-animation-fill-mode: forwards;
   /*Chrome 16+, Safari 4+*/
-  -moz-animation: slide-up-fade-in ease 1s;
+  -moz-animation: slide-up-fade-in ease 1.5s;
   -moz-animation-iteration-count: 1;
   -moz-transform-origin: 50% 50%;
   -moz-animation-fill-mode: forwards;
   /*FF 5+*/
-  -ms-animation: slide-up-fade-in ease 1s;
+  -ms-animation: slide-up-fade-in ease 1.5s;
   -ms-animation-iteration-count: 1;
   -ms-transform-origin: 50% 50%;
   -ms-animation-fill-mode: forwards;
@@ -157,7 +161,7 @@ table {
 @keyframes slide-up-fade-in {
   0% {
     opacity: 0;
-    transform: translate(0px, 40px);
+    transform: translate(0px, 200px);
   }
   100% {
     opacity: 1;
@@ -167,7 +171,7 @@ table {
 @-moz-keyframes slide-up-fade-in {
   0% {
     opacity: 0;
-    -moz-transform: translate(0px, 40px);
+    -moz-transform: translate(0px, 200px);
   }
   100% {
     opacity: 1;
@@ -177,7 +181,7 @@ table {
 @-webkit-keyframes slide-up-fade-in {
   0% {
     opacity: 0;
-    -webkit-transform: translate(0px, 40px);
+    -webkit-transform: translate(0px, 200px);
   }
   100% {
     opacity: 1;
@@ -187,7 +191,7 @@ table {
 @-ms-keyframes slide-up-fade-in {
   0% {
     opacity: 0;
-    -ms-transform: translate(0px, 40px);
+    -ms-transform: translate(0px, 200px);
   }
   100% {
     opacity: 1;

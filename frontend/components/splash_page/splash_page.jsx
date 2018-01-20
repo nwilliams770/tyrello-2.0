@@ -11,13 +11,13 @@ class SplashPage extends React.Component {
           <source src="http://res.cloudinary.com/nwilliams770/video/upload/v1515454667/Temps_Des_Fleurs_dspllq.mp4" type="video/mp4" />
         </video>
         <div className='logo'></div>
-        <h1 className='splash--h1 slide-up-fade-in'> welcome. </h1>
-        <h2 className='splash--h2 slide-up-fade-in'> Get more done with Tyrello </h2>
-        <div className='splash--body slide-up-fade-in'>
-          <ul className='session--bullets'>
-            <li> Flexible prioritization </li>
-            <li> Organize projects with lists and cards </li>
-            <li> A visual way to collaborate </li>
+        <div className='splash--copy'>
+          <h1 className='splash--h1 slide-up-fade-in'> welcome. </h1>
+          <h2 className='splash--h2 slide-up-fade-in'> Get more done with Tyrello </h2>
+          <ul className='splash--body slide-up-fade-in'>
+              <li> Flexible prioritization </li>
+              <li> Organize projects with lists and cards </li>
+              <li> A visual way to collaborate </li>
           </ul>
         </div>
         <Footer />
