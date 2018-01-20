@@ -19,6 +19,9 @@ class SplashPage extends React.Component {
               <li> Organize projects with lists and cards </li>
               <li> A visual way to collaborate </li>
           </ul>
+          <p> Already have an account? <Link className="login-link" to="/login"> Sign in here </Link> </p>
+          <p> Otherwise, you can <Link className="login-link" to="/login"> Sign in here </Link> </p>
+          <p> Looking for a cheap thrill instead? Click the demo button below: </p>
         </div>
         <Footer />
       </div>

@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import BoardsIndexItem from './boards_index_item';
+import ToolBarContainer from '../toolbar/toolbar_container';
+
 
 class BoardsIndex extends React.Component {
   componentDidMount() {
