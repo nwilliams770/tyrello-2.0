@@ -10,7 +10,6 @@ class SessionForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillUnmount() {
@@ -45,10 +44,6 @@ class SessionForm extends React.Component {
     this.props.login(user);
   }
 
-  demoLogin(e) {
-    e.preventDefault();
-    this.props.login({ username: 'Loras-Tyrell', password: 'password' });
-  }
 
   render() {
     return (
@@ -77,9 +72,7 @@ class SessionForm extends React.Component {
           />
           {this.renderErrors()}
           <input className="session-button" type="submit" value="LOG IN" />
-          <button className="session-button" onClick={this.demoLogin} >
-            DEMO
-              </button>
+          
         </form>
         </div>
         

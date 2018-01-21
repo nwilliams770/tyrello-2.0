@@ -1,9 +1,37 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import Footer from '../footer/footer';
 
 
 class SplashPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.demoLogin = this.demoLogin.bind(this);
+  }
+
+  login() {
+    this.props.login({ username: 'Sansa-Stark', password: 'password' });
+  }
+
+  fadeOut() {
+    const fadeOuts = document.getElementsByClassName('slide-up-fade-in');
+    for (var i = 0; i < fadeOuts.length; i++) {
+      fadeOuts[i].classList.add('slide-up-fade-in-reverse');
+    }
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    fadeOut();
+    
+  }
+
+
+
+
+
+
   render() {
     return (
       <div className='bg'>
@@ -19,9 +47,12 @@ class SplashPage extends React.Component {
               <li> Organize projects with lists and cards </li>
               <li> A visual way to collaborate </li>
           </ul>
-          <p> Already have an account? <Link className="login-link" to="/login"> Sign in here </Link> </p>
-          <p> Otherwise, you can <Link className="login-link" to="/login"> Sign in here </Link> </p>
-          <p> Looking for a cheap thrill instead? Click the demo button below: </p>
+          <div className='splash--links slide-up-fade-in'>
+            <p> Already have an account? <Link className='link' to="/login"> Sign in here </Link> </p>
+            <p> Otherwise, you can <Link className='link' to="/signup"> Sign up here </Link> </p>
+            <p> Ain't got time for all that? Click the demo button below: </p>
+          </div>
+          <button className='session-button slide-up-fade-in' onClick={this.demoLogin} > DEMO </button>          
         </div>
         <Footer />
       </div>

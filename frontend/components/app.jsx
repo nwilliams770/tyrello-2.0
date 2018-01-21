@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 
-import SplashPage from './splash_page/splash_page';
+import SplashPageContainer from './splash_page/splash_page_container';
 import SignupContainer from './signup/signup_container';
 import SessionContainer from './login/session_form_container';
 import BoardsIndexContainer from './boards_index/boards_index_container';
@@ -22,7 +22,7 @@ const App = () => (
       <AuthRoute path='/login' component= {SessionContainer} />
       <AuthRoute path='/signup' component={SignupContainer} />
       <ProtectedRoute path ='/boards' component={BoardsIndexContainer} />
-      <AuthRoute exact path='/' component={SplashPage} />
+      <AuthRoute exact path='/' component={SplashPageContainer} />
       <UnknownRoute path='/*' />
     </Switch>
   </div>
