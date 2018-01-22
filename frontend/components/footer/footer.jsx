@@ -4,6 +4,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-contents">
+        <h1> test </h1>
         <a target="_blank" href="https://github.com/nwilliams770">
           <i className="footer-btn fa fa-github-square fa-3x" aria-hidden="true"></i>
         </a>

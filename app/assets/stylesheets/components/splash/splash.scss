@@ -1,10 +1,10 @@
 .bg {
   background-color: rgba(0,0,0,0.4);
-  overflow: hidden;
+  position: absolute;
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  z-index: -49;
+  overflow: hidden;
 }
 
 .fullscreen-bg {
