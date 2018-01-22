@@ -371,6 +371,11 @@ input {
   font-size: 18px;
 }
 
+.board-button:hover, .info-bttn:hover {
+  transition: 0.3s ease-in;
+  background: #b2c88e;
+}
+
 .toolbar--link {
   text-decoration: none;
   padding-right: 4%;
@@ -410,4 +415,51 @@ input {
   display: flex;
   align-items: center;
   padding: 5px;
+}
+
+.header--shared, .header--personal {
+  width: 15%;
+  height: 5%;
+  background: rgba(142, 174, 89, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3%;
+  font-family: "Open-Sans", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.board--icons {
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+.board-index-item--container {
+  width: 250px;
+  height: 125px;
+  border-radius: 3%;
+  background: rgba(142, 174, 89, 0.7);
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+
+.board-index-item--name {
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.board-index-item--link {
+  text-decoration: none;
+}
+
+.board-index-item--link:visited {
+  text-decoration: none;
+  color: white;
 }

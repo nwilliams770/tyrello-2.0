@@ -12,7 +12,7 @@
 }
 
 .boards-button {
-  background: #8EAE59;
+  background: $green;
   color: white;
   border: 0;
   border-radius: 3%;
@@ -20,6 +20,11 @@
   align-items: center;
   font-family: $body-font;
   font-size: 18px;
+}
+
+.board-button:hover, .info-bttn:hover {
+  transition: 0.3s ease-in;
+  background: #b2c88e;
 }
 
 
@@ -56,7 +61,7 @@
 }
 
 .info-bttn {
-  background: #8EAE59;
+  background: $green;
   border: 0;
   border-radius: 3%;
   display: flex;

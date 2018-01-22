@@ -1,0 +1,48 @@
+.header--shared, .header--personal {
+  width: 15%;
+  height: 5%;
+  background: rgba(142, 174, 89, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3%;
+  font-family: $header-font;
+  color:white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.board--icons {
+  margin-right: 5%;
+  margin-left: 2%;
+}
+
+.board-index-item--container {
+  width: 250px;
+  height: 125px;
+  border-radius: 3%;
+  background: rgba(142, 174, 89, 0.7);
+  font-family: $body-font;
+  color: white;
+  font-size: 20px;
+  margin-top: 1%;
+  margin-left: 10%;
+}
+
+.board-index-item--name {
+  padding-left: 5%;
+  padding-top: 5%;
+
+}
+
+.board-index-item--link {
+  text-decoration: none;
+
+}
+
+.board-index-item--link:visited {
+  text-decoration: none;
+  color: white;
+}

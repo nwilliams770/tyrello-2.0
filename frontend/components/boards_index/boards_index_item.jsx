@@ -7,15 +7,11 @@ class BoardsIndexItem extends React.Component {
     const { board } = this.props;
     const link = `/boards/${board.id}`;
     return (
-      <li className="boards-list-item">
-        <Link to={link} className="boards-list-item-link">
-          <button className="boards-list-item-button">
-            <div className="boards-name">
-              {board.name}
-            </div>
-          </button>
-        </Link>
-      </li>
+      <Link to={link} className='board-index-item--link'>
+          <div className='board-index-item--container'>
+            <p className='board-index-item--name'> {board.name} </p>
+          </div>
+      </Link>
     );
   }
 }
