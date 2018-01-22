@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 38%;
+  height: 48%;
   border-radius: 5%;
 }
 
@@ -74,9 +74,30 @@
   background:rgba(255, 255, 255, 0.4);
 }
 
-#login-signup--submit {
-  margin-top: 13%;
-  padding: 10px 15px 10px;
+.login-signup--submit {
+  border-radius: 3%;
+  margin-top: 5%;
+  width: 50%;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: $body-font;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+.login-signup--submit:hover {
+  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.login-signup--submit:focus {
+  outline: 0;
+}
+
+#signup--submit {
+  margin-top: 15%;
 }
 
 .link-copy {
@@ -88,6 +109,25 @@
 
 #redirect-link {
   font-style: normal;
+}
+
+.bg--signup-login {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -50;
+}
+
+.login-signup-errors {
+  font-family: $body-font;
+  color: #ff7777;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 

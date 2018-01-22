@@ -36,7 +36,7 @@ class Signup extends React.Component {
 
   renderErrors() {
     return (
-      <ul className="login-errors">
+      <ul className="login-signup-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -48,7 +48,7 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div className='bg'>
+      <div className='bg--signup-login'>
         <div className='logo-login-signup'></div>
         <div className='photo-bg'>
           <div className='signup-login--container'>
@@ -74,7 +74,7 @@ class Signup extends React.Component {
                 className='login-signup--input'
               />
               {this.renderErrors()}
-              <input id='login-signup--submit' type="submit" value="sign up" />
+              <input id='signup--submit' className='login-signup--submit' type="submit" value="SIGN UP" />
             </form>
             <p className='link-copy'> Already have an account? <Link id='redirect-link'to='/login'> Log In </Link> </p>
           </div>
