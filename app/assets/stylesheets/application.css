@@ -1,57 +1,280 @@
-/*
-Error: File to import not found or unreadable: ./components/footer/footer.
-        on line 6 of style.scss
-
-1: @import './helpers/_variables';
-2: @import 'base';
-3: @import './components/splash/splash';
-4: @import './components/signup/signup';
-5: @import './components/login/login';
-6: @import './components/footer/footer';
-
-Backtrace:
-style.scss:6
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:45:in `import'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `block in with_base'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `with_base'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:20:in `render'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/engine.rb:290:in `render'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/nwilliams770/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ./components/footer/footer.\A         on line 6 of style.scss\A \A 1: @import './helpers/_variables';\A 2: @import 'base';\A 3: @import './components/splash/splash';\A 4: @import './components/signup/signup';\A 5: @import './components/login/login';\A 6: @import './components/footer/footer';"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-bg {
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -50;
+}
+
+.fullscreen-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -50;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url("http://res.cloudinary.com/nwilliams770/image/upload/v1515178866/Bee_Flower_Compressed_ds0ii6.jpg") center center/cover no-repeat;
+  }
+}
+.splash--copy {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60%;
+}
+
+.splash--h1 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.splash--h2 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 3%;
+}
+
+.splash--body > * {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  color: white;
+}
+
+.splash--links > * {
+  margin-top: 1%;
+  margin-left: 2%;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: white;
+}
+
+.logo {
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_600/v1515437937/Tyrello1_pxcaqb.png");
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 135px;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.splash--container {
+  color: white;
+}
+
+.link {
+  font-style: normal;
+}
+
+.slide-up-fade-in-reverse {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.slide-up-fade-in {
+  animation: slide-up-fade-in ease 1.5s;
+}
+
+@keyframes slide-up-fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.photo-bg {
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/v1515620625/Temps_Des_Fleurs_twhy6i.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)), url("http://res.cloudinary.com/nwilliams770/image/upload/v1515620625/Temps_Des_Fleurs_twhy6i.jpg");
+  width: 100%;
+  height: 100%;
+  z-index: -50;
+}
+
+.logo-login-signup {
+  background-image: url("http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_600/v1515437937/Tyrello1_pxcaqb.png");
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 135px;
+  margin-top: 5%;
+  margin-left: 5%;
+  position: absolute;
+}
+
+.signup-login--container {
+  margin-left: 60%;
+  margin-top: 18%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 38%;
+  border-radius: 5%;
+}
+
+.signup-login--header {
+  margin-top: 5%;
+  font-family: "Open-Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.signup-login-form {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-signup--input {
+  border: none;
+  border-bottom: 5px solid white;
+  background: transparent;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.login-signup--input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-signup--input:focus {
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.login-signup--input:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#login-signup--submit {
+  margin-top: 13%;
+  padding: 10px 15px 10px;
+}
+
+.link-copy {
+  margin-top: 3%;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+#redirect-link {
+  font-style: normal;
+}
+
+.session--container {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  margin-left: 60%;
+  margin-top: 20%;
+  font-family: "Lato", sans-serif;
+  color: white;
+  align-items: center;
+}
+
+.session--header {
+  font-weight: 900;
+  margin-top: 3%;
+  font-size: 50px;
+}
+
+.session--bullets {
+  margin-right: 5%;
+  margin-top: 1%;
+}
+
+.session--form {
+  display: flex;
+  flex-direction: column;
+}
