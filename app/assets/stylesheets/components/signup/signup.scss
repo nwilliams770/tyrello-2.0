@@ -1,22 +1,81 @@
-.signup--container {
+.photo-bg {
   background-image: url('http://res.cloudinary.com/nwilliams770/image/upload/v1515620625/Temps_Des_Fleurs_twhy6i.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
+  background: linear-gradient(
+                     rgba(20,20,20, .3), 
+                     rgba(20,20,20, .3)),
+                     url('http://res.cloudinary.com/nwilliams770/image/upload/v1515620625/Temps_Des_Fleurs_twhy6i.jpg');
+                   
   width: 100%;
   height: 100%;
+  z-index: -50;
 }
 
-.description {
+.logo-login-signup {
+  background-image: url('http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_600/v1515437937/Tyrello1_pxcaqb.png');
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 135px;
+  margin-top: 5%;
+  margin-left: 5%;
   position: absolute;
-
-  top: 100%;
-
-  width: 100%;
-
-  height: 200px;
-
-  background: yellow;
-
 }
+
+.signup-login--container {
+  margin-left: 60%;
+  margin-top: 18%;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 35%;
+  border-radius: 5%;
+}
+
+.signup-login--header {
+  margin-top: 5%;
+  font-family: $header-font;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.signup-login-form {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+}
+
+.login-signup--input {
+  border: none;
+  border-bottom: 5px solid white;
+  background: transparent;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+}
+
+.login-signup--input::placeholder {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.login-signup--input:focus {
+  background:rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+.login-signup--input:hover {
+  background:rgba(255, 255, 255, 0.4);
+}
+
+.login-signup--submit {
+  margin-top: 13%;
+}
+
+

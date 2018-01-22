@@ -47,36 +47,28 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='logo'></div> 
+      <div className='bg'>
+        <div className='logo-login-signup'></div> 
         <div className='session--container'>
-        <h1 className='session--header'> Welcome back! </h1>
-        <ul className='session--bullets'>
-          <li> Get more done with Tyrello </li>
-          <li> Flexible prioritization </li>
-          <li> Organize projects with lists and cards </li>
-          <li> A Trello parody </li>
-        </ul>
-        <form className='session--form' onSubmit = {this.handleSubmit}>
-          <input type="text"
-            value={this.state.username}
-            onChange={this.update('username')}
-            id="username"
-            placeholder="Username"
-          />
-          <input type="password"
-            value={this.state.password}
-            onChange={this.update('password')}
-            id="password"
-            placeholder="Password"
-          />
-          {this.renderErrors()}
-          <input className="session-button" type="submit" value="LOG IN" />
-          
-        </form>
+          <h1 className='session--header'> Welcome back! </h1>
+          <form className='session--form' onSubmit = {this.handleSubmit}>
+            <input type="text"
+              value={this.state.username}
+              onChange={this.update('username')}
+              id="username"
+              placeholder="Username"
+            />
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              id="password"
+              placeholder="Password"
+            />
+            {this.renderErrors()}
+            <input className="session-button" type="submit" value="LOG IN" />
+            
+          </form>
         </div>
-        
-        
       </div>
     );
 

@@ -49,31 +49,36 @@ class Signup extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='signup--container'>
-          <h1> Sign up! </h1>
-          <form onSubmit={this.handleSubmit} className='signup--form'>
-            <input type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              placeholder="Email"
-            />
+      <div className='bg'>
+        <div className='logo-login-signup'></div>
+        <div className='photo-bg'>
+          <div className='signup-login--container'>
+            <h1 className='signup-login--header'> Sign up </h1>
+            <form className='signup-login-form' onSubmit={this.handleSubmit}>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                placeholder="Email"
+                className='login-signup--input'
+              />
 
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              placeholder="Username"
-            />
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              placeholder="Password"
-            />
-            {this.renderErrors()}
-            <input id="sign-up-button" type="submit" value="SIGN UP" />
-          </form>
-          <p> Already have an account? <Link to='/'> Log In </Link> </p>
-
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                placeholder="Username"
+                className='login-signup--input'
+              />
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                placeholder="Password"
+                className='login-signup--input'
+              />
+              {this.renderErrors()}
+              <input className='login-signup--submit' type="submit" value="sign up" />
+            </form>
+            <p> Already have an account? <Link to='/'> Log In </Link> </p>
+          </div>
         </div>
         <Footer />
       </div>
