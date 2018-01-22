@@ -145,6 +145,28 @@ table {
   font-style: normal;
 }
 
+.session-button {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 24px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3%;
+  width: 30%;
+  margin-left: 25%;
+  margin-top: 5%;
+  padding: 15px 20px;
+}
+
+.session-button:hover {
+  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.session-button:focus {
+  outline: 0;
+}
+
 .slide-up-fade-in-reverse {
   opacity: 0;
   transition: all 1s ease-in-out;

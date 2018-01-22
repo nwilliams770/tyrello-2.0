@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import Footer from '../footer/footer';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -80,7 +79,6 @@ class Signup extends React.Component {
             <p className='link-copy'> Already have an account? <Link id='redirect-link'to='/login'> Log In </Link> </p>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../footer/footer';
+
 
 
 class SplashPage extends React.Component {
@@ -16,8 +16,9 @@ class SplashPage extends React.Component {
     for (var i = 0; i < fadeOuts.length; i++) {
       fadeOuts[i].classList.add('slide-up-fade-in-reverse');
     }
-    setTimeout(this.props.login({ username: 'Sansa-Stark', password: 'password' }), 3000);
-    
+
+    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 2000);
+
   }
 
   render() {
@@ -42,7 +43,6 @@ class SplashPage extends React.Component {
           </div>
           <button className='session-button slide-up-fade-in' onClick={this.demoLogin} > DEMO </button>          
         </div>
-        <Footer />
       </div>
     );
   }
