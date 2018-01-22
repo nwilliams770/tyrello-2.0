@@ -24,11 +24,31 @@ class BoardsIndex extends React.Component {
       <div className='bg--signup-login'>
         <div className='photo-bg'>
           <ToolBarContainer />
-          <h1> test </h1>
-          <ul>
-            { personalBoards}
-            {sharedBoards}
-          </ul>
+          <div className='header--personal'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516661865/user-black-close-up-shape_aog0gg.svg'
+                 height='25px'
+                 width='25px' />
+            <h1> Personal Boards </h1>
+          </div>
+          <div className='personal-boards--container'>
+            <ul>
+              {personalBoards}
+            </ul>
+          </div>
+
+          <div className='header--shared'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516661862/multiple-users-silhouette_erlndp.svg'
+                 height='25px'
+                 width='25px' />
+
+            <h1> Shared Boards </h1>
+          </div>
+          <div className='shared-boards--container'>
+            <ul>
+              {sharedBoards}
+            </ul>
+          </div>
+          
         </div>
       </div>
 

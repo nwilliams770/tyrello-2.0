@@ -351,7 +351,63 @@ input {
   display: flex;
   min-width: 100%;
   background-color: rgba(255, 255, 255, 0.4);
-  height: 40px;
+  height: 5.5%;
   align-items: center;
   flex-direction: row;
+}
+
+.boards--dropdown {
+  margin-left: 5%;
+}
+
+.boards-button {
+  background: #8EAE59;
+  color: white;
+  border: 0;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.toolbar--link {
+  text-decoration: none;
+  padding-right: 4%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo--link {
+  margin-left: 40%;
+}
+
+.toolbar--logo {
+  opacity: 0.5;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+
+.toolbar--logo:hover {
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.right-buttons--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 40%;
+}
+
+.info-bttn {
+  background: #8EAE59;
+  border: 0;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }

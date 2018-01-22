@@ -9,34 +9,42 @@ class ToolBar extends React.Component {
   }
   // personalBoards= { this.props.personalBoards }
   // sharedBoards= {this.props.sharedBoards }
+
+  handleClick() {
+    e.preventDefault();
+  }
+
   render() {
     return (
 
         <div className="toolbar--container">
-          <div className="boards-dropdown">
-            <Link to="/boards">
+          <div className="boards--dropdown">
+            <Link to="/boards" className='toolbar--link'>
               <button className="boards-button" onClick={this.handleClick}>
-                <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
-                  className="boards-btn-logo" />
+              <img src="http://res.cloudinary.com/nwilliams770/image/upload/v1516651830/Boards_Icon_jiple0.svg"
+                   height="25px"
+                   width="25px" />
                   Boards
               </button>
             </Link>
           </div>
-         
-          <Link className="logo-container" to="/boards">
-          </Link>
-          <div className="right-buttons-container">
-            <a className="icon-links" target="_blank" href="https://www.linkedin.com/in/nwilliams770/">
-              <button className="right-buttons"><i className="right-buttons-icon fa fa-plus fa-2x" aria-hidden="true"></i></button>
-            </a>
-            <a className="icon-links" target="_blank" href="https://www.linkedin.com/in/nwilliams770/">
-              <button className="right-buttons"><i className="right-buttons-icon fa fa-info fa-2x" aria-hidden="true"></i></button>
-            </a>
-            <a className="icon-links" target="_blank" href="https://www.linkedin.com/in/nwilliams770/">
-              <button className="right-buttons"><i className="right-buttons-icon fa fa-bell-o fa-2x" aria-hidden="true"></i></button>
-            </a>
 
-            <SessionDropdown />
+          <div className='logo--link'>
+            <Link to='/boards'>
+              <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516654326/Logo_wjhvtl.svg'
+                   height='40px'
+                   width='40px'
+                   className='toolbar--logo' />
+            </Link>
+          </div>
+         
+          <div className="right-buttons--container">
+            <button className='info-bttn' onClick={this.handleClick}>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516655735/info_apeplu.svg'
+                 height='20px'
+                 width='20px' />
+            </button>
+            {/* <SessionDropdown /> */}
           </div>
         </div>
     );
