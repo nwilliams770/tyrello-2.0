@@ -75,9 +75,9 @@ class Signup extends React.Component {
                 className='login-signup--input'
               />
               {this.renderErrors()}
-              <input className='login-signup--submit' type="submit" value="sign up" />
+              <input id='login-signup--submit' type="submit" value="sign up" />
             </form>
-            <p> Already have an account? <Link to='/'> Log In </Link> </p>
+            <p className='link-copy'> Already have an account? <Link id='redirect-link'to='/login'> Log In </Link> </p>
           </div>
         </div>
         <Footer />

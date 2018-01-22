@@ -10,27 +10,15 @@ class SplashPage extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
-  login() {
-    this.props.login({ username: 'Sansa-Stark', password: 'password' });
-  }
-
-  fadeOut() {
+  demoLogin(e) {
+    e.preventDefault();
     const fadeOuts = document.getElementsByClassName('slide-up-fade-in');
     for (var i = 0; i < fadeOuts.length; i++) {
       fadeOuts[i].classList.add('slide-up-fade-in-reverse');
     }
-  }
-
-  demoLogin(e) {
-    e.preventDefault();
-    fadeOut();
+    setTimeout(this.props.login({ username: 'Sansa-Stark', password: 'password' }), 3000);
     
   }
-
-
-
-
-
 
   render() {
     return (
@@ -48,7 +36,7 @@ class SplashPage extends React.Component {
               <li> A visual way to collaborate </li>
           </ul>
           <div className='splash--links slide-up-fade-in'>
-            <p> Already have an account? <Link className='link' to="/login"> Sign in here </Link> </p>
+            <p> Already have an account? <Link className='link' to="/login"> Log in here </Link> </p>
             <p> Otherwise, you can <Link className='link' to="/signup"> Sign up here </Link> </p>
             <p> Ain't got time for all that? Click the demo button below: </p>
           </div>

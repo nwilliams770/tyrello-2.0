@@ -49,25 +49,27 @@ class SessionForm extends React.Component {
     return (
       <div className='bg'>
         <div className='logo-login-signup'></div> 
-        <div className='session--container'>
-          <h1 className='session--header'> Welcome back! </h1>
-          <form className='session--form' onSubmit = {this.handleSubmit}>
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              id="username"
-              placeholder="Username"
-            />
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              id="password"
-              placeholder="Password"
-            />
-            {this.renderErrors()}
-            <input className="session-button" type="submit" value="LOG IN" />
-            
-          </form>
+        <div className='photo-bg'>
+          <div className='signup-login--container'>
+            <h1 className='signup-login--header'> log in </h1>
+            <form className='signup-login-form' onSubmit = {this.handleSubmit}>
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                placeholder="Username"
+                className='login-signup--input'
+              />
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                placeholder="Password"
+                className='login-signup--input'
+              />
+              {this.renderErrors()}
+              <input className='login-signup--submit' type="submit" value="LOG IN" />
+            </form>
+            <p className='link-copy'> New in town? <Link id='redirect-link' to='/signup'> Sign up </Link> </p>
+          </div>
         </div>
       </div>
     );

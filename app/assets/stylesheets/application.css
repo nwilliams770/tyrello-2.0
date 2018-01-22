@@ -53,13 +53,12 @@ table {
 }
 
 .bg {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   background-size: cover;
-  width: 100%;
-  height: 100%;
-  z-index: 49;
+  width: 100vw;
+  height: 100vh;
+  z-index: -49;
 }
 
 .fullscreen-bg {
@@ -197,7 +196,7 @@ table {
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 35%;
+  height: 38%;
   border-radius: 5%;
 }
 
@@ -237,8 +236,20 @@ table {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.login-signup--submit {
+#login-signup--submit {
   margin-top: 13%;
+  padding: 10px 15px 10px;
+}
+
+.link-copy {
+  margin-top: 3%;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+#redirect-link {
+  font-style: normal;
 }
 
 .session--container {

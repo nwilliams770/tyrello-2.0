@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   width: 25%;
-  height: 35%;
+  height: 38%;
   border-radius: 5%;
 }
 
@@ -74,8 +74,20 @@
   background:rgba(255, 255, 255, 0.4);
 }
 
-.login-signup--submit {
+#login-signup--submit {
   margin-top: 13%;
+  padding: 10px 15px 10px;
+}
+
+.link-copy {
+ margin-top: 3%;
+ font-family: $body-font;
+ font-style: italic;
+ font-size: 18px;
+}
+
+#redirect-link {
+  font-style: normal;
 }
 
 
