@@ -11,24 +11,19 @@ class ToolBar extends React.Component {
   // sharedBoards= {this.props.sharedBoards }
   render() {
     return (
-      <div className="toolbar-background">
-        <div className="toolbar-container">
-          <div className="boards-button-container">
-            <div className="boards-dropdown">
-              <Link to="/boards">
-                <button className="boards-button" onClick={this.handleClick}>
-                  <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
-                    className="boards-btn-logo" />
-                  <div className="boards-button-copy">
-                    Boards
-                  </div>
-                </button>
-              </Link>
-            </div>
+
+        <div className="toolbar--container">
+          <div className="boards-dropdown">
+            <Link to="/boards">
+              <button className="boards-button" onClick={this.handleClick}>
+                <img src="http://res.cloudinary.com/nwilliams770/image/upload/c_scale,h_18/v1511726611/logo_gku6sb.png"
+                  className="boards-btn-logo" />
+                  Boards
+              </button>
+            </Link>
           </div>
+         
           <Link className="logo-container" to="/boards">
-            <div className="logo">
-            </div>
           </Link>
           <div className="right-buttons-container">
             <a className="icon-links" target="_blank" href="https://www.linkedin.com/in/nwilliams770/">
@@ -44,7 +39,6 @@ class ToolBar extends React.Component {
             <SessionDropdown />
           </div>
         </div>
-      </div>
     );
   }
 }

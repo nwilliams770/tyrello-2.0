@@ -21,12 +21,15 @@ class BoardsIndex extends React.Component {
     ));
     
     return (
-      <div>
-        <h1> test </h1>
-        <ul>
-          { personalBoards}
-          {sharedBoards}
-        </ul>
+      <div className='bg--signup-login'>
+        <div className='photo-bg'>
+          <ToolBarContainer />
+          <h1> test </h1>
+          <ul>
+            { personalBoards}
+            {sharedBoards}
+          </ul>
+        </div>
       </div>
 
       // <div className="bg-box2">
