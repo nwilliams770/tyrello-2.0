@@ -35,8 +35,12 @@
   background: #b2c88e;
 }
 
-.board-index-item--link:not(:first-child) {
-  margin-left: 1.5%;
+// .board-index-item--link:not(:first-child) {
+//   margin-left: 1.5%;
+// }
+
+.board-index-item--link {
+  margin-right: 1.5%;
 }
 
 .board-index-item--name {

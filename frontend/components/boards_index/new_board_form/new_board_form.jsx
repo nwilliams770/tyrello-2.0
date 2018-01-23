@@ -59,14 +59,29 @@ class NewBoardForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='new-board--container' onClick={this.handleClick} ref={node => { this.node = node; }} >
+      <div ref={node => { this.node = node; }}>
+        <div className='new-board--container' onClick={this.handleClick}>
           <p> Create a new board... </p>
         </div>
         
         {this.state.visible && (
-          <div>
-            <h1> test </h1>
+          <div className='new-board-form--container'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_10/v1516671380/X-icon_ytjbme.svg'
+                 width='17px'
+                 height='17px' 
+                 id='new-board-form--exit'
+                 onClick={this.handleClick} />
+            <h1 id='board-form--header'> Create board </h1>
+            <hr id="board-form--underline" />
+            <form>
+              <label>
+                <input id="board-form--input"
+                  onChange={this.handleChange('name')}
+                  placeholder="Name"
+                  value={this.state.name} />
+              </label>
+              <button id="board-form--submit" onClick={this.handleSubmit}>Create</button>
+            </form>
           </div>
         )}
       </div>

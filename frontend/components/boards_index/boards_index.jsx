@@ -34,7 +34,7 @@ class BoardsIndex extends React.Component {
             <h1> Personal Boards </h1>
           </div>
           <div className='personal-boards--container'>
-            <ul className='boards--list'>
+            <ul className='boards--list slide-up-fade-in--boards'>
               {personalBoards}
               <NewBoardFormContainer />
             </ul>
@@ -49,7 +49,7 @@ class BoardsIndex extends React.Component {
             <h1> Shared Boards </h1>
           </div>
           <div className='shared-boards--container'>
-            <ul className='boards--list'>
+            <ul className='boards--list slide-up-fade-in--boards'>
               {sharedBoards}
             </ul>
           </div>
