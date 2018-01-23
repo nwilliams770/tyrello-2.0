@@ -27,8 +27,16 @@
   font-family: $body-font;
   color: white;
   font-size: 20px;
-  margin-top: 1%;
-  margin-left: 10%;
+  margin-top: 3%;
+}
+
+.board-index-item--container:hover {
+  transition: 0.3s ease-in-out;
+  background: #b2c88e;
+}
+
+.board-index-item--link:not(:first-child) {
+  margin-left: 1.5%;
 }
 
 .board-index-item--name {
@@ -45,4 +53,10 @@
 .board-index-item--link:visited {
   text-decoration: none;
   color: white;
+}
+
+.boards--list {
+  display: flex;
+  flex-flow: wrap;
+  margin-left: 10%;
 }

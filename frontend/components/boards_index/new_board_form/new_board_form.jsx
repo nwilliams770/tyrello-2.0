@@ -13,7 +13,6 @@ class NewBoardForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
 
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
@@ -28,7 +27,6 @@ class NewBoardForm extends React.Component {
     e.preventDefault();
     const params = this.state.name;
     if (params === "") {
-
       return;
     }
     this.props.createBoard(params)
@@ -59,44 +57,16 @@ class NewBoardForm extends React.Component {
     this.setState({ name: "" });
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map(err =>
-          <li> err </li>)}
-      </ul>
-    );
-  }
-
   render() {
     return (
-      <div className="board-form-parent" ref={node => { this.node = node; }} >
-        <li className="create-board">
-          <button onClick={this.handleClick} className="create-board-button">
-            <div className="create-board-copy">
-              Create a new board...
-            </div>
-          </button>
-        </li>
+      <div>
+        <div className='new-board--container' onClick={this.handleClick} ref={node => { this.node = node; }} >
+          <p> Create a new board... </p>
+        </div>
+        
         {this.state.visible && (
-          <div className='board-form-container'>
-            <div className="board-form-header">
-              <div className="board-form-header-copy">
-                Create Board
-              </div>
-              <button className="form-exit-button" onClick={this.handleClick}>&#10005;</button>
-            </div>
-            <hr className="board-form-underline" />
-            <form>
-              <label>
-                <input className="new-board-input"
-                  onChange={this.handleChange('name')}
-                  placeholder="Name"
-                  value={this.state.name} />
-              </label>
-              <button className="new-board-submit"
-                onClick={this.handleSubmit}>Create</button>
-            </form>
+          <div>
+            <h1> test </h1>
           </div>
         )}
       </div>
@@ -105,3 +75,34 @@ class NewBoardForm extends React.Component {
 }
 
 export default withRouter(NewBoardForm);
+
+{/* <div className="board-form-parent" ref={node => { this.node = node; }} >
+  <li className="create-board">
+    <button onClick={this.handleClick} className="create-board-button">
+      <div className="create-board-copy">
+        Create a new board...
+            </div>
+    </button>
+  </li>
+  {this.state.visible && (
+    <div className='board-form-container'>
+      <div className="board-form-header">
+        <div className="board-form-header-copy">
+          Create Board
+              </div>
+        <button className="form-exit-button" onClick={this.handleClick}>&#10005;</button>
+      </div>
+      <hr className="board-form-underline" />
+      <form>
+        <label>
+          <input className="new-board-input"
+            onChange={this.handleChange('name')}
+            placeholder="Name"
+            value={this.state.name} />
+        </label>
+        <button className="new-board-submit"
+          onClick={this.handleSubmit}>Create</button>
+      </form>
+    </div>
+  )}
+</div> */}
