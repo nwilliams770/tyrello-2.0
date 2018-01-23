@@ -31,11 +31,6 @@ class SessionDropdown extends React.Component {
     this.handleClick();
   }
 
-  // logout2 () {
-  //   this.props.logout().then(() => this.props.history.push("/"));
-  // }
-
-
   render() {
     return (
 

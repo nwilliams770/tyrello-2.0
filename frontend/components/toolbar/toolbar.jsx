@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionDropdown from './session_dropdown/session_dropdown_container';
+import BoardsDropdown from './boards_dropdown/boards_dropdown_container';
 
 class ToolBar extends React.Component {
 
@@ -19,14 +20,7 @@ class ToolBar extends React.Component {
 
         <div className="toolbar--container">
           <div className="boards--dropdown">
-            <Link to="/boards" className='toolbar--link'>
-              <button className="boards-button" onClick={this.handleClick}>
-              <img src="http://res.cloudinary.com/nwilliams770/image/upload/v1516651830/Boards_Icon_jiple0.svg"
-                   height="25px"
-                   width="25px" />
-                  Boards
-              </button>
-            </Link>
+            <BoardsDropdown />
           </div>
 
           <div className='logo--link'>
@@ -44,7 +38,7 @@ class ToolBar extends React.Component {
                  height='20px'
                  width='20px' />
             </button>
-            {/* <SessionDropdown /> */}
+            <SessionDropdown />
           </div>
         </div>
     );
