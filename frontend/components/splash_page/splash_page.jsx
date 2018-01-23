@@ -17,7 +17,7 @@ class SplashPage extends React.Component {
       fadeOuts[i].classList.add('slide-up-fade-in-reverse');
     }
 
-    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 2000);
+    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 1500);
 
   }
 

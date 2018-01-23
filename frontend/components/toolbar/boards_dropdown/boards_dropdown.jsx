@@ -13,12 +13,6 @@ class BoardsDropdown extends React.Component {
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
-  componentDidMount() {
-    console.log(this.state);
-    this.props.fetchBoards();
-
-  }
-
   handleClick() {
     if (!this.state.visible) {
       document.addEventListener('click', this.handleOutsideClick, false);
@@ -42,7 +36,7 @@ class BoardsDropdown extends React.Component {
     const passedPersonalBoards = this.props.personalBoards.map((board) => {
       let link = `/boards/${board.id}`;
       return (
-        <Link to={link} className="boards-dropdown--items" >
+        <Link to={link} className="boards-dropdown--items" key={board.id}>
           {board.name}
         </Link>
       );

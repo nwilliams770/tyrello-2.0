@@ -10,11 +10,8 @@ const mapStateToProps = (state) => ({
   sharedBoards: selectSharedBoards(state)
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchBoards: () => dispatch(fetchBoards())
-});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(BoardsDropdown);
