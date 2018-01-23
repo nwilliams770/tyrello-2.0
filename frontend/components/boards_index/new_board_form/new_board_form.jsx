@@ -25,7 +25,7 @@ class NewBoardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const params = this.state.name;
+    const params = {name: this.state.name};
     if (params === "") {
       return;
     }

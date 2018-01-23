@@ -23,5 +23,5 @@ export const fetchBoard = (id) => dispatch => (
 );
 
 export const createBoard = (params) => dispatch => (
-  APIUtil.createBoard(params).then(boards => dispatch(receiveBoards(boards)))
+  APIUtil.createBoard(params).then(board => dispatch(receiveBoard(board)))
 );

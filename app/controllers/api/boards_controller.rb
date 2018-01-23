@@ -4,7 +4,8 @@ class Api::BoardsController < ApplicationController
     @board.author_id = current_user.id
 
     if @board.save!
-      render :index
+      # render :index
+      index
     else
       render :json, @board.errors.full_messages, status: 422
     end
