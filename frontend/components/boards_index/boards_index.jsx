@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import BoardsIndexItem from './boards_index_item';
 import ToolBarContainer from '../toolbar/toolbar_container';
+import NewBoardFormContainer from './new_board_form/new_board_form_container';
+
 
 
 class BoardsIndex extends React.Component {
@@ -34,6 +36,7 @@ class BoardsIndex extends React.Component {
           <div className='personal-boards--container'>
             <ul>
               {personalBoards}
+              {/* <NewBoardFormContainer /> */}
             </ul>
           </div>
 

@@ -90,8 +90,10 @@
   color: white;
 }
 
-.link {
+.link, link:visited {
   font-style: normal;
+  color: white;
+  margin-left: 4px;
 }
 
 .session-button {

@@ -107,8 +107,10 @@
  font-size: 18px;
 }
 
-#redirect-link {
+#redirect-link, #redirect-link:visited {
   font-style: normal;
+  color: white;
+  margin-left: 4px;
 }
 
 .bg--signup-login {
