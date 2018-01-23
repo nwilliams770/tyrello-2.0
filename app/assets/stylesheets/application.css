@@ -413,7 +413,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 .info-bttn {
@@ -423,6 +423,7 @@ input {
   display: flex;
   align-items: center;
   padding: 5px;
+  margin-right: 10%;
 }
 
 .header--shared, .header--personal {
@@ -646,4 +647,62 @@ input {
 
 .boards-dropdown--items:hover {
   background: rgba(255, 255, 255, 0.4);
+}
+
+.session-img--container {
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  overflow: hidden;
+}
+
+.session-dropdown--container {
+  background: #8EAE59;
+  height: 100px;
+  width: 200px;
+  color: white;
+  font-family: "Open-Sans", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-left: -12%;
+  margin-top: 0.2%;
+  border-radius: 1%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#session-dropdown--header {
+  margin-top: 2%;
+}
+
+#session-dropdown--underline {
+  height: 1px;
+  border: 0;
+  border-top: 2px solid white;
+  margin: 0.5em 0;
+  width: 90%;
+}
+
+#logout--button {
+  border-radius: 3%;
+  margin-top: 5%;
+  width: 50%;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+#logout--button:hover {
+  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#logout--button:focus {
+  outline: 0;
 }

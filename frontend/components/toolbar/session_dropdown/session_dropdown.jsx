@@ -32,25 +32,19 @@ class SessionDropdown extends React.Component {
   }
 
   render() {
-    return (
+    const userImage = this.props.currentUser.username === 'Sansa-Stark' ? 
+      <div onClick={this.handleClick} className='session-img--container'> <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_50/v1516744926/OlennaTyrell_vldewo.jpg' /> </div>
+      : <div onClick={this.handleClick} className='session-img--container'> <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516744890/MargeryTyrell_wxjv0t.jpg' /> </div>;
 
+    return (
       <div ref={node => { this.node = node; }} >
-        <button className="toolbar-sess-btn" onClick={this.handleClick}>PIC</button>
+          {userImage}
         {this.state.visible && (
-          <div className="session-dropdown-container">
-            <div className='session-dropdown'>
-              <div className='session-dropdown-header'>
-                <button className='session-exit-button'
-                  onClick={this.handleClick}>
-                  &#10005;</button>
-                <div className="current-user-header-copy">
-                  Welcome, {this.props.currentUser.username}!
-                    </div>
-              </div>
-              <hr className="session-dropdown-underline" />
-              <button className="logout-button"
-                onClick={this.props.logout}>Logout</button>
-            </div>
+          <div className="session-dropdown--container">
+            <h1 id='session-dropdown--header'> Hello, {this.props.currentUser.username}! </h1>
+            <hr id="session-dropdown--underline" />
+            <button id="logout--button"
+            onClick={this.props.logout}>Sign out</button>
           </div>
         )}
       </div>
@@ -59,3 +53,24 @@ class SessionDropdown extends React.Component {
 }
 
 export default SessionDropdown;
+
+{/* <div ref={node => { this.node = node; }} >
+  <button className="toolbar-sess-btn" onClick={this.handleClick}>PIC</button>
+  {this.state.visible && (
+    <div className="session-dropdown-container">
+      <div className='session-dropdown'>
+        <div className='session-dropdown-header'>
+          <button className='session-exit-button'
+            onClick={this.handleClick}>
+            &#10005;</button>
+          <div className="current-user-header-copy">
+            Welcome, {this.props.currentUser.username}!
+                    </div>
+        </div>
+        <hr className="session-dropdown-underline" />
+        <button className="logout-button"
+          onClick={this.props.logout}>Logout</button>
+      </div>
+    </div>
+  )}
+</div> */}

@@ -39,9 +39,6 @@ class BoardsDropdown extends React.Component {
     this.handleClick();
   }
   render() {
-    // if (!this.props.personalBoards) {
-    //   return <div></div>;
-    // }
     const passedPersonalBoards = this.props.personalBoards.map((board) => {
       let link = `/boards/${board.id}`;
       return (
