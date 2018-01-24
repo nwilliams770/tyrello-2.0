@@ -10,10 +10,10 @@ const defaultState = ({
 });
 
 const listsReducer = (state= defaultState, action) => {
-  Object.freeze(state);
+  // Object.freeze(state);
   switch(action.type) {
     case RECEIVE_LISTS:
-      return merge({}, state, action.lists);
+      return merge({}, defaultState, action.lists);
     case RECEIVE_LIST:
       return merge({}, state, action.list);
     default:
