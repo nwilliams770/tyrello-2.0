@@ -8,6 +8,9 @@ import NewBoardFormContainer from './new_board_form/new_board_form_container';
 
 
 class BoardsIndex extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
     document.title = "Tyrello - Boards";
     this.props.fetchBoards();
@@ -56,39 +59,8 @@ class BoardsIndex extends React.Component {
           
         </div>
       </div>
-
-      // <div className="bg-box2">
-      //   <ToolBarContainer
-      //     className="entire-toolbar" />
-      //   <div className="personal-header-bg">
-      //     <div className="personal-header-container">
-      //       <i className="personal-icon fa fa-user fa-2x" aria-hidden="true"></i>
-      //       <h1 className="boards-header">Personal Boards</h1>
-      //     </div>
-      //   </div>
-      //   <div className="boards-list-container">
-      //     <ul className="boards-list">
-      //       {personalBoards}
-      //       <NewBoardFormContainer />
-      //     </ul>
-      //   </div>
-      //   <div className="shared-boards">
-      //     <div className="shared-header-bg">
-      //       <div className="shared-header-container">
-      //         <i className="personal-icon fa fa-users fa-2x" aria-hidden="true"></i>
-      //         <h1 className="boards-header">Shared Boards</h1>
-      //       </div>
-      //     </div>
-      //     <div className="shared-boards-list-container">
-      //       <ul className="boards-list">
-      //         {sharedBoards}
-      //       </ul>
-      //     </div>
-      //   </div>
-      // </div>
     );
   }
-
 }
 
 export default BoardsIndex;

@@ -1,9 +1,9 @@
 class Api::ListsController < ApplicationController
-  def index
+  def show
     @board = Board.find(params[:id])
-    @lists = board.lists
+    @lists = @board.lists
     @list_ids = []
     @lists.each {|list| @list_ids << list.id }
-    render :index
+    render :show
   end
 end

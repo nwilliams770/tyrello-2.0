@@ -6,10 +6,16 @@ class BoardShow extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    document.title = "Tyrello - Boards";
+    console.log(this.props.match);
+    this.props.fetchLists(this.props.match.params.id);
+  }
+
   render() {
     return (
       <div>
-        <Toolbar />
+        <ToolBar />
         <h1> Test </h1>
       </div>
     );
