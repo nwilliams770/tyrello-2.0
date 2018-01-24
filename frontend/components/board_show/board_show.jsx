@@ -8,15 +8,18 @@ class BoardShow extends React.Component {
 
   componentDidMount() {
     document.title = "Tyrello - Boards";
-    console.log(this.props.match);
     this.props.fetchLists(this.props.match.params.id);
   }
 
   render() {
+    const lists = this.props.lists.map(list => (<li> {list.title} </li>));
     return (
       <div>
         <ToolBar />
         <h1> Test </h1>
+        <ul>
+          { lists }
+        </ul>
       </div>
     );
   }

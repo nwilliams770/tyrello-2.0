@@ -1,0 +1,42 @@
+#info-dropdown {
+  margin-right: 10%;
+}
+
+.info-bttn {
+  background: $green;
+  border: 0;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.info-dropdown--container {
+  background: $green;
+  height: 80px;
+  width: 220px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-left: -12%;
+  margin-top: 0.5%;
+  border-radius: 1%;
+  box-shadow: 0 3px 6px rgba(0,0,0,.4);
+}
+
+#info-dropdown--header {
+  font-family: $header-font;
+  font-weight: 500;
+  margin-top: 2%;
+}
+
+#github--link, #github--link:visited {
+  color: white;
+}
+
+#github--link:hover {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180);
+}

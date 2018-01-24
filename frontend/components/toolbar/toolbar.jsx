@@ -2,17 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SessionDropdown from './session_dropdown/session_dropdown_container';
 import BoardsDropdown from './boards_dropdown/boards_dropdown_container';
+import InfoDropdown from './info_dropdown/info_dropdown';
 
 class ToolBar extends React.Component {
 
   constructor(props) {
     super(props);
-  }
-  // personalBoards= { this.props.personalBoards }
-  // sharedBoards= {this.props.sharedBoards }
-
-  handleClick() {
-    e.preventDefault();
   }
 
   render() {
@@ -33,11 +28,9 @@ class ToolBar extends React.Component {
           </div>
          
           <div className="right-buttons--container">
-            <button className='info-bttn' onClick={this.handleClick}>
-            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516655735/info_apeplu.svg'
-                 height='20px'
-                 width='20px' />
-            </button>
+            <div id='info-dropdown'>
+              <InfoDropdown />
+            </div>
             <SessionDropdown />
           </div>
         </div>

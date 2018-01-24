@@ -416,16 +416,6 @@ input {
   margin-left: 35%;
 }
 
-.info-bttn {
-  background: #8EAE59;
-  border: 0;
-  border-radius: 3%;
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  margin-right: 10%;
-}
-
 .header--shared, .header--personal {
   width: 15%;
   min-height: 5%;
@@ -658,8 +648,8 @@ input {
 
 .session-dropdown--container {
   background: #8EAE59;
-  height: 100px;
-  width: 200px;
+  height: 80px;
+  width: 220px;
   color: white;
   font-family: "Open-Sans", sans-serif;
   font-size: 16px;
@@ -687,7 +677,6 @@ input {
 
 #logout--button {
   border-radius: 3%;
-  margin-top: 5%;
   width: 50%;
   padding: 6px 16px;
   font-size: 12px;
@@ -705,4 +694,47 @@ input {
 
 #logout--button:focus {
   outline: 0;
+}
+
+#info-dropdown {
+  margin-right: 10%;
+}
+
+.info-bttn {
+  background: #8EAE59;
+  border: 0;
+  border-radius: 3%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.info-dropdown--container {
+  background: #8EAE59;
+  height: 80px;
+  width: 220px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-left: -12%;
+  margin-top: 0.5%;
+  border-radius: 1%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+#info-dropdown--header {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 500;
+  margin-top: 2%;
+}
+
+#github--link, #github--link:visited {
+  color: white;
+}
+
+#github--link:hover {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180);
 }
