@@ -18,5 +18,7 @@ export const selectLists = (state) => {
 };
 
 // export const selectCards = (state) => {
-//   let cardIds = values(state.entities.cards)
+//   let cardIds = values(state.entities.cards.allListIds);
+//   let cards = {};
+  
 // }
