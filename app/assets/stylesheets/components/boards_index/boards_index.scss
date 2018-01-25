@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 3%;
+  border-radius: 3px;
   font-family: $header-font;
   color:white;
   font-size: 18px;
@@ -22,7 +22,7 @@
 .board-index-item--container {
   width: 250px;
   height: 125px;
-  border-radius: 3%;
+  border-radius: 3px;
   background: rgba(142, 174, 89, 0.7);
   font-family: $body-font;
   color: white;

@@ -25,12 +25,14 @@ class BoardShow extends React.Component {
     });
       
     return (
-      <div>
-        <ToolBar />
-        <ul>
-          { lists }
-        </ul>
-        <NewListFormContainer />
+      <div className='bg--signup-login'>
+        <div className='photo-bg'>
+          <ToolBar />
+          <ul className='board-show--lists'>
+            { lists }
+            <NewListFormContainer />
+          </ul>
+        </div>
       </div>
     );
   }

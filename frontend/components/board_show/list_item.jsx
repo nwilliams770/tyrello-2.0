@@ -15,8 +15,8 @@ class ListItem extends React.Component {
     
     return (
       
-      <div>
-        <h1> {list.title} </h1>
+      <div className='list-item--container'>
+        <h1 className='list-item--title'> {list.title} </h1>
         {cardItems}
         <NewCardFormContainer />
       </div>

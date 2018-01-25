@@ -36,12 +36,10 @@ class BoardsIndex extends React.Component {
                  className='board--icons' />
             <h1> Personal Boards </h1>
           </div>
-          <div className='personal-boards--container'>
-            <ul className='boards--list slide-up-fade-in--boards'>
-              {personalBoards}
-              <NewBoardFormContainer />
-            </ul>
-          </div>
+          <ul className='boards--list slide-up-fade-in--boards'>
+            {personalBoards}
+            <NewBoardFormContainer />
+          </ul>
 
           <div className='header--shared'>
             <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516661862/multiple-users-silhouette_erlndp.svg'
@@ -51,12 +49,9 @@ class BoardsIndex extends React.Component {
 
             <h1> Shared Boards </h1>
           </div>
-          <div className='shared-boards--container'>
-            <ul className='boards--list slide-up-fade-in--boards'>
-              {sharedBoards}
-            </ul>
-          </div>
-          
+          <ul className='boards--list slide-up-fade-in--boards'>
+            {sharedBoards}
+          </ul>
         </div>
       </div>
     );

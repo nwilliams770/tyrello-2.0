@@ -159,7 +159,7 @@ input {
   background-color: transparent;
   border: 1px solid white;
   color: white;
-  border-radius: 3%;
+  border-radius: 3px;
   width: 30%;
   margin-left: 25%;
   margin-top: 5%;
@@ -227,7 +227,7 @@ input {
   align-items: center;
   width: 25%;
   height: 48%;
-  border-radius: 5%;
+  border-radius: 5px;
 }
 
 .signup-login--header {
@@ -267,7 +267,7 @@ input {
 }
 
 .login-signup--submit {
-  border-radius: 3%;
+  border-radius: 3px;
   margin-top: 5%;
   width: 50%;
   padding: 10px 20px;
@@ -368,7 +368,7 @@ input {
   background: #8EAE59;
   color: white;
   border: 0;
-  border-radius: 3%;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   font-family: "Lato", sans-serif;
@@ -423,7 +423,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 3%;
+  border-radius: 3px;
   font-family: "Open-Sans", sans-serif;
   color: white;
   font-size: 18px;
@@ -440,7 +440,7 @@ input {
 .board-index-item--container {
   width: 250px;
   height: 125px;
-  border-radius: 3%;
+  border-radius: 3px;
   background: rgba(142, 174, 89, 0.7);
   font-family: "Lato", sans-serif;
   color: white;
@@ -481,7 +481,7 @@ input {
   width: 250px;
   height: 125px;
   background: rgba(255, 255, 255, 0.4);
-  border-radius: 3%;
+  border-radius: 3px;
   font-family: "Lato", sans-serif;
   color: lightgray;
   font-size: 16px;
@@ -502,7 +502,7 @@ input {
   width: 250px;
   height: 125px;
   background: #8EAE59;
-  border-radius: 3%;
+  border-radius: 3px;
   z-index: 50;
   margin-top: -50%;
   position: relative;
@@ -555,7 +555,7 @@ input {
 }
 
 #board-form--submit {
-  border-radius: 3%;
+  border-radius: 3px;
   margin-top: 5%;
   width: 50%;
   padding: 6px 16px;
@@ -597,7 +597,7 @@ input {
   position: absolute;
   overflow: scroll;
   margin-top: 0.45%;
-  border-radius: 1%;
+  border-radius: 1px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   color: white;
   font-size: 18px;
@@ -659,7 +659,7 @@ input {
   position: absolute;
   margin-left: -12%;
   margin-top: 0.2%;
-  border-radius: 1%;
+  border-radius: 1px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -676,7 +676,7 @@ input {
 }
 
 #logout--button {
-  border-radius: 3%;
+  border-radius: 3px;
   width: 50%;
   padding: 6px 16px;
   font-size: 12px;
@@ -703,7 +703,7 @@ input {
 .info-bttn {
   background: #8EAE59;
   border: 0;
-  border-radius: 3%;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   padding: 5px;
@@ -720,7 +720,7 @@ input {
   position: absolute;
   margin-left: -12%;
   margin-top: 0.5%;
-  border-radius: 1%;
+  border-radius: 1px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -737,4 +737,28 @@ input {
 #github--link:hover {
   transition: all 0.3s ease-in-out;
   transform: rotate(180);
+}
+
+.board-show--lists {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.list-item--container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(142, 174, 89, 0.7);
+  margin-right: 1%;
+  border-radius: 3px;
+  width: 300px;
+  color: white;
+  padding: 1%;
+}
+
+.list-item--title {
+  font-family: "Open-Sans", sans-serif;
+  font-size: 18px;
 }
