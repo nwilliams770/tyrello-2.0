@@ -36,31 +36,7 @@ class Api::BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
-    @boards = current_user.boards
-    @shared_boards = current_user.shared_boards
-
-    @board_ids = []
-    @boards.each do |board|
-      @board_ids << board.id
-    end
-
-    @shared_board_ids = []
-    @shared_boards.each do |board|
-      @shared_board_ids << board.id
-    end
-
-    @lists = @board.lists
-    @list_ids = []
-    @board.lists.each do |list|
-      @list_ids << list.id
-    end
-
-    @cards = []
-      @board.lists.each do |list|
-        list.cards.each do |card|
-          @cards << card
-        end
-      end
+    @board_id = [@board.id]
     render :show
   end
 

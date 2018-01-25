@@ -13,14 +13,12 @@ class Api::CardsController < ApplicationController
     @board = Board.find(params[:id])
     @lists = @board.lists
     @cards = []
-    @card_ids = []
-
+    @list_ids = []
+    
     @lists.each do |list|
+      @list_ids << list.id
       list.cards.each {|card| @cards << card}
     end
-
-    @cards.each { |card| @card_ids << card.id }
-
     render :show
   end
   private

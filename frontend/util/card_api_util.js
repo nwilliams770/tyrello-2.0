@@ -1,7 +1,7 @@
 export const fetchCards = id => (
   $.ajax({
     method: 'GET',
-    url: `api/lists/${id}`
+    url: `api/cards/${id}`
   })
 );
 

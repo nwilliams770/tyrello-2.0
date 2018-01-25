@@ -7,7 +7,7 @@ import {
 
 const defaultState = ({
   byListId: {},
-  allIds: {}
+  allListIds: [],
 });
 
 const cardsReducer = (state = defaultState, action) => {

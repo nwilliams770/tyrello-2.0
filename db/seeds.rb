@@ -13,6 +13,8 @@ board3 = Board.create(name: "Emotional Assistance for Wights", author_id: user1.
 
 list1 = List.create(title: "Frost-Resistant Weapons", board_id: board2.id)
 list3 = List.create(title: "Undead Dragon Recipes", board_id: board2.id)
+list4 = List.create(title: "Undead Dragon Recipes200", board_id: board2.id)
+
 # list4 = List.create(title: "where the lady whitewalkers at?", board_id: board2.id)
 # list5 = List.create(title: "the Night King", board_id: board2.id)
 # list6 = List.create(title: "wights and how to make them work FOR YOU", board_id: board2.id)
