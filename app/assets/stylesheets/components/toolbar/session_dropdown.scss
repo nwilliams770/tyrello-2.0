@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.session-img--container:hover {
+  cursor: pointer;
+}
+
 .session-dropdown--container {
   background: $green;
   height: 80px;

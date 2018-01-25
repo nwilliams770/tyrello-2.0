@@ -9,10 +9,11 @@ import { selectLists, selectPersonalBoards} from '../../reducers/selectors';
 
 import BoardShow from './board_show';
 
+// boards: selectPersonalBoards(state),
 
 const mapStateToProps = state => ({
   lists: selectLists(state),
-  boards: selectPersonalBoards(state),
+  boards: state.entities.boards.byId,
   cards: state.entities.cards
 });
 

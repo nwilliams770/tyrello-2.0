@@ -7,11 +7,9 @@ class CardItem extends React.Component {
 
   render() {
     const card = this.props.card;
-    console.log('card --------------------');
-    console.log(card);
     return (
-      <div>
-        <h1> {card.title} </h1>
+      <div className='card-item--container'>
+        <h1 className='card-item--title'> {card.title} </h1>
       </div>
     );
   }

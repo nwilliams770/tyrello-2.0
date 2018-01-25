@@ -56,18 +56,24 @@ class NewListForm extends React.Component {
   render() {
     return (
       <div ref={node => { this.node = node; }} >
-        <button onClick={this.handleClick}>
-          Add a list...
-        </button>
+        <div onClick={this.handleClick} className='new-list--container'>
+         <p> Create a new list... </p>
+        </div>
         {this.state.visible && (
-          <div>
+          <div className='new-list-form--container'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_10/v1516671380/X-icon_ytjbme.svg'
+              width='17px'
+              height='17px'
+              id='new-board-form--exit'
+              onClick={this.handleClick} />
+            <h1 id='list-form--header'> Create list </h1>
+            <hr id="board-form--underline" />
             <form>
-              <div>
-                <input onChange={this.handleChange('title')}
-                  placeholder="Title"
-                  value={this.state.title} />
-              </div>
-              <button onClick={this.handleSubmit}>Add</button>
+              <input id='list-form--input'
+                onChange={this.handleChange('title')}
+                placeholder="Title"
+                value={this.state.title} />
+              <button id='list-form--submit' onClick={this.handleSubmit}>Create</button>
             </form>
           </div>
         )}

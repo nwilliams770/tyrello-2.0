@@ -57,18 +57,24 @@ class NewCardForm extends React.Component {
   render() {
     return (
       <div ref={node => { this.node = node; }} >
-        <button onClick={this.handleClick} >
-          Add a card...
-        </button>
+        <div className='new-card--container' onClick={this.handleClick} >
+          <p> Add a new card... </p>
+        </div>
         {this.state.visible && (
+          <div className='new-card-form--container'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_10/v1516671380/X-icon_ytjbme.svg'
+              width='17px'
+              height='17px'
+              id='new-board-form--exit'
+              onClick={this.handleClick} />
+            <h1 id='new-card-form--header'> Add a card </h1>
             <form>
-                <div>
                   <input onChange={this.handleChange('title')}
                     placeholder="Title"
                     value={this.state.title} />
-                </div>
               <button onClick={this.handleSubmit}>Add</button>
             </form>
+          </div>
         )}
       </div>
     );

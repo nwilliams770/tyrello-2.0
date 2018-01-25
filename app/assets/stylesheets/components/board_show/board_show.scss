@@ -2,13 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 1%;
-  margin-top: 1%;
+  margin-left: 15px;
+  
 }
 
 // ******* LIST ITEM ********
 
 .list-item--container {
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   background: rgba(142, 174, 89, 0.7);
@@ -17,9 +18,28 @@
   width: 300px;
   color: white;
   padding: 1%;
+  box-sizing: border-box;
 }
 
 .list-item--title {
   font-family: $header-font;
   font-size: 18px;
+}
+
+// ******* CARD ITEM ********
+
+.card-item--container {
+  width: 100%;
+  font-family: $body-font;
+  background: rgba(255, 255, 255, 0.8);
+  height: 30px;
+  border-radius: 3px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  color: $darkgreen;
+}
+
+.card-item--title {
+  margin-left: 2%;
 }

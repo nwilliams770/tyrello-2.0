@@ -2,6 +2,7 @@ class Api::ListsController < ApplicationController
   def create
     @list = List.new(list_params)
 
+
     if @list.save!
       render :show
     else
