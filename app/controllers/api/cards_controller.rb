@@ -1,7 +1,9 @@
 class Api::CardsController < ApplicationController
   def create
     @card = Card.new(card_params)
-    
+    @lists = [List.find(card_params[:list_id])]
+    @list_ids = [@lists[0].id]
+
     if @card.save!
       render :show
     else

@@ -9,4 +9,4 @@ end
 
 json.allListIds do
   json.array! @list_ids
-end 
+end

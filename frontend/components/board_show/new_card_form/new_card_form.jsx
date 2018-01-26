@@ -7,6 +7,7 @@ class NewCardForm extends React.Component {
 
     this.state = {
       title: "",
+      list_id: this.props.listId,
       visible: false
     };
 
@@ -30,7 +31,6 @@ class NewCardForm extends React.Component {
     this.props.createCard(params);
     this.setState({ title: "" });
     this.handleClick();
-    this.props.fetchBoard(this.props.id);
   }
 
   handleClick() {

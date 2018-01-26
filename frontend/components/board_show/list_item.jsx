@@ -18,7 +18,7 @@ class ListItem extends React.Component {
       <div className='list-item--container'>
         <h1 className='list-item--title'> {list.title} </h1>
         {cardItems}
-        <NewCardFormContainer />
+        <NewCardFormContainer listId={list.id} />
       </div>
     );
   }

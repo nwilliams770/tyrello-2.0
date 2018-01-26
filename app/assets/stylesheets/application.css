@@ -772,7 +772,7 @@ input {
   width: 100%;
   font-family: "Lato", sans-serif;
   background: rgba(255, 255, 255, 0.8);
-  height: 30px;
+  min-height: 30px;
   border-radius: 3px;
   margin-top: 2%;
   display: flex;

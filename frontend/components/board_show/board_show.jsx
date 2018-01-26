@@ -6,6 +6,10 @@ import NewListFormContainer from './new_list_form/new_list_form_container';
 class BoardShow extends React.Component {
   constructor(props) {
     super(props);
+
+  this.state = {
+    currentBoardName: ''
+  };
   }
 
   componentDidMount() {
@@ -13,13 +17,19 @@ class BoardShow extends React.Component {
 
     this.props.fetchLists(currentBoardId);
     this.props.fetchCards(currentBoardId);  
-    this.props.fetchBoards().then(() => {
-      const currentBoardName = (this.props.boards[currentBoardId]['name']);
-      document.title = `${currentBoardName} | Tyrello`;
-    });
+    this.props.fetchBoards()
+      .then(() => {
+        const currentBoardName = (this.props.boards[currentBoardId]['name']);
+        document.title = `${currentBoardName} | Tyrello`;
+    }).then(() => this.setState({ currentBoardName: this.props.boards[currentBoardId]['name']}));
   }
 
   render() {
+    const currentBoardId = this.props.match.params.id;
+    const currentBoardName = this.state.currentBoardName;
+
+
+
     const lists = this.props.lists.map((list) => { 
       const cards = this.props.cards.byListId[list.id] === undefined ? [] : this.props.cards.byListId[list.id];
       return <ListItem key={list.id}
@@ -31,7 +41,8 @@ class BoardShow extends React.Component {
       <div className='bg--signup-login'>
         <div className='photo-bg'>
           <ToolBar />
-          <ul className='board-show--lists'>
+          <h1> {currentBoardName} </h1>
+          <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
             <NewListFormContainer />
           </ul>
