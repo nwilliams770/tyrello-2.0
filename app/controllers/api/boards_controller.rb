@@ -42,6 +42,8 @@ class Api::BoardsController < ApplicationController
 
   def edit
     @board = Board.find(params[:id])
+    @board.name = board_params[:name]
+    
     if @board.save!
       render :json
     else

@@ -41,7 +41,7 @@ class BoardShow extends React.Component {
       <div className='bg--signup-login'>
         <div className='photo-bg'>
           <ToolBar />
-          <h1> {currentBoardName} </h1>
+          <h1 id='board-show--current-board'> {currentBoardName} </h1>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
             <NewListFormContainer />
