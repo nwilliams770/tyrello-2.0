@@ -68,11 +68,12 @@ class NewCardForm extends React.Component {
               id='new-board-form--exit'
               onClick={this.handleClick} />
             <h1 id='new-card-form--header'> Add a card </h1>
-            <form>
-                  <input onChange={this.handleChange('title')}
-                    placeholder="Title"
-                    value={this.state.title} />
-              <button onClick={this.handleSubmit}>Add</button>
+            <hr id="board-form--underline" />
+            <form id='new-card-form'>
+              <textarea id='card-form--textarea' onChange={this.handleChange('title')}
+                placeholder="Title"
+                value={this.state.title} />
+              <button id='card-form--submit' onClick={this.handleSubmit}>Add</button>
             </form>
           </div>
         )}

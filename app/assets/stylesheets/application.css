@@ -758,6 +758,9 @@ input {
   color: white;
   padding: 1%;
   box-sizing: border-box;
+  height: min-content;
+  max-height: 350px;
+  overflow: scroll;
 }
 
 .list-item--title {
@@ -892,20 +895,71 @@ input {
 
 .new-card-form--container {
   width: inherit;
-  height: 125px;
+  height: 140px;
   background: #8EAE59;
   border-radius: 3px;
   z-index: 50;
-  margin-top: -13.3%;
-  position: absolute;
+  margin-top: -10.8%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 18px;
+  position: relative;
 }
 
 #new-card-form--header {
   margin-top: -5%;
+}
+
+#new-card-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+#card-form--textarea {
+  max-width: 97.8%;
+  display: block;
+  border: 2px solid white;
+  background: transparent;
+  justify-content: center;
+  font-size: 14px;
+  color: #799649;
+}
+
+#card-form--textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#card-form--textarea:focus {
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+#card-form--textarea:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#card-form--submit {
+  border-radius: 3px;
+  margin-top: 3%;
+  width: 50%;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+#card-form--submit:hover {
+  transition: 0.3s ease-in;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#card-form--submit:focus {
+  outline: 0;
 }

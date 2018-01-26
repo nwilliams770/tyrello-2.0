@@ -6,7 +6,9 @@ import { selectPersonalBoards, selectSharedBoards } from '../../reducers/selecto
 
 const mapStateToProps = state => ({
   personalBoards: selectPersonalBoards(state),
-  sharedBoards: selectSharedBoards(state)
+  sharedBoards: selectSharedBoards(state),
+  currentUser: state.session.currentUser['username']
+
 });
 
 const mapDispatchToProps = dispatch => ({

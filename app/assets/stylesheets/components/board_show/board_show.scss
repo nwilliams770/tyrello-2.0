@@ -19,6 +19,9 @@
   color: white;
   padding: 1%;
   box-sizing: border-box;
+  height: min-content;
+  max-height: 350px;
+  overflow: scroll;
 }
 
 .list-item--title {

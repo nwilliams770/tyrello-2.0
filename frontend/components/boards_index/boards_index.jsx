@@ -12,8 +12,10 @@ class BoardsIndex extends React.Component {
     super(props);
   }
   componentDidMount() {
-    document.title = "Tyrello - Boards";
     this.props.fetchBoards();
+    // const sComp = this.props.currentUser.slice(-1) === 's' ? "'" : "'s";
+    // document.title = `${this.props.currentUser}${sComp} Boards | Tyrello`;
+    document.title = 'Boards | Tyrello';
   }
 
   render() {

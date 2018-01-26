@@ -14,18 +14,9 @@ class BoardShow extends React.Component {
     this.props.fetchLists(currentBoardId);
     this.props.fetchCards(currentBoardId);  
     this.props.fetchBoards().then(() => {
-      console.log('BOARD **********');
       const currentBoardName = (this.props.boards[currentBoardId]['name']);
       document.title = `${currentBoardName} | Tyrello`;
     });
-
-
-    // const currentBoardName = this.props.boards.forEach((board) => {
-    //   console.log(board.id);
-    //   console.log(board.name);
-    //   }
-    // );
-
   }
 
   render() {
