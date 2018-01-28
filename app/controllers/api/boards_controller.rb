@@ -40,12 +40,13 @@ class Api::BoardsController < ApplicationController
     render :show
   end
 
-  def edit
+  def update
     @board = Board.find(params[:id])
     @board.name = board_params[:name]
-    
+    @board_id = board_params[:id]
+
     if @board.save!
-      render :json
+      render :show
     else
       render :json, @board.errors.full_messages, status: 422
     end
