@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class BoardsDropdown extends React.Component {
@@ -89,4 +89,4 @@ class BoardsDropdown extends React.Component {
   }
 }
 
-export default BoardsDropdown;
+export default withRouter(BoardsDropdown);
