@@ -39,6 +39,7 @@ class ListItem extends React.Component {
         <EditListFormContainer title={listTitle} 
                                id={list.id}
                                onUpdate={ this.handleListUpdate.bind(this) } />
+        
         {cardItems}
         <NewCardFormContainer listId={list.id} />
       </div>
