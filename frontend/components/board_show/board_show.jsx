@@ -37,8 +37,8 @@ class BoardShow extends React.Component {
           document.title = `${currentBoardName} | Tyrello`;
         }).then(() => this.setState({ currentBoardName: this.props.boards[newBoardId]['name'] }));
     }
-    
   }
+
 
 
   render() {

@@ -9,8 +9,6 @@ import { selectLists, selectPersonalBoards} from '../../reducers/selectors';
 
 import BoardShow from './board_show';
 
-// boards: selectPersonalBoards(state),
-
 const mapStateToProps = state => ({
   lists: selectLists(state),
   boards: state.entities.boards.byId,
@@ -20,7 +18,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchLists: (id) => dispatch(fetchLists(id)),
   fetchCards: (id) => dispatch(fetchCards(id)),
-  fetchBoards: (id) => dispatch(fetchBoards())
+  fetchBoards: () => dispatch(fetchBoards())
 });
 
 export default withRouter(connect(

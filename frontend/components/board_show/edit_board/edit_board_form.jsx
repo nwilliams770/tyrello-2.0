@@ -7,7 +7,7 @@ class EditBoardForm extends React.Component {
 
     this.state = {
       visible: false,
-      name: this.props.name
+      name: ''
     };
     
     this.handleChange = this.handleChange.bind(this);
@@ -16,6 +16,7 @@ class EditBoardForm extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
+
 
   handleChange(field) {
     return (e) => this.setState({ [field]: e.currentTarget.value });
@@ -29,6 +30,7 @@ class EditBoardForm extends React.Component {
     }
     this.props.editBoard(params);
     this.handleClick();
+    this.setState({name: this.state.name});
   }
 
   handleClick() {
@@ -51,19 +53,15 @@ class EditBoardForm extends React.Component {
   }
 
   render() {
-    const currentBoardName = this.state.name;
-    console.log(currentBoardName);
+    const currentBoardName = this.props.currentBoardName;
 
-    console.log('STATE********');
-    console.log(this.state);
-    console.log(this.props);
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick}> {this.state.currentBoardName}</h1>
+        <h1 onClick={this.handleClick}> {currentBoardName} </h1>
         {this.state.visible && (
         <div>
           <form>
-            <input onChange={this.handleChange('name')} placeholder={this.state} />
+            <input onChange={this.handleChange('name')} placeholder={currentBoardName} />
             <button onClick={this.handleSubmit}>Update</button>
           </form>
         </div>
