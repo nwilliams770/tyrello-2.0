@@ -2,7 +2,8 @@ import { merge } from 'lodash';
 
 import {
   RECEIVE_LISTS,
-  RECEIVE_LIST } from '../actions/list_actions';
+  RECEIVE_LIST, 
+  RECEIVE_UPDATED_LISTS} from '../actions/list_actions';
 
 const defaultState = ({
   byId: {},
@@ -16,6 +17,8 @@ const listsReducer = (state= defaultState, action) => {
       return merge({}, defaultState, action.lists);
     case RECEIVE_LIST:
       return merge({}, state, action.list);
+    case RECEIVE_UPDATED_LISTS:
+      return merge({}, defaultState, action.lists);
     default:
       return state;
   }

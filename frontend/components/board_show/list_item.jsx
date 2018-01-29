@@ -2,6 +2,7 @@ import React from 'react';
 import CardItem from './card_item';
 import NewCardFormContainer from './new_card_form/new_card_form_container';
 import EditListFormContainer from './edit_list/edit_list_form_container';
+import DeleteListDropdownContainer from './delete_list/delete_list_dropdown_container';
 import { keys } from 'lodash';
 
 
@@ -39,7 +40,7 @@ class ListItem extends React.Component {
         <EditListFormContainer title={listTitle} 
                                id={list.id}
                                onUpdate={ this.handleListUpdate.bind(this) } />
-        
+        <DeleteListDropdownContainer id={list.id} />
         {cardItems}
         <NewCardFormContainer listId={list.id} />
       </div>

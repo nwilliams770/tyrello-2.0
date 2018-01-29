@@ -21,9 +21,10 @@ export const editList = list => (
   })
 );
 
-export const deleteList = id => (
+export const deleteList = list => (
   $.ajax({
     method: 'DELETE',
-    url: `api/lists/${id}`
+    url: `api/lists/${list.id}`,
+    data: {list}
   })
 );
