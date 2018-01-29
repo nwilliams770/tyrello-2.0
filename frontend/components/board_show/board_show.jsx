@@ -60,7 +60,6 @@ class BoardShow extends React.Component {
       <div className='bg--signup-login'>
         <div className='photo-bg'>
           <ToolBar />
-          <h1 id='board-show--current-board'> {currentBoardName} </h1>
           <EditBoardFormContainer name= {currentBoardName} 
                                   currentBoardId = {currentBoardId} 
                                   onUpdate= { this.handleUpdate.bind(this) } />

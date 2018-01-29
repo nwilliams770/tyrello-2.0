@@ -52,13 +52,16 @@ class EditBoardForm extends React.Component {
     } else {
       document.removeEventListener('click', this.handleOutsideClick, false);
     }
-
     this.setState(prevState => ({
       visible: !prevState.visible,
     }));
+
+  
   }
 
   handleOutsideClick(e) {
+
+
     if (this.node.contains(e.target) || e.target === null) {
       return;
     }
@@ -70,12 +73,16 @@ class EditBoardForm extends React.Component {
 
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick}> {name} </h1>
+        <h1 id='edit-board--header' onClick={this.handleClick}> {name} </h1>
         {this.state.visible && (
         <div>
-          <form>
-            <input onChange={this.handleChange('name')} placeholder={name} />
-            <button onClick={this.handleSubmit}>Update</button>
+          <form id='edit-board--form'>
+            <input id='edit-board--input' onChange={this.handleChange('name')} defaultValue={name} />
+            <button id='edit-board--submit' onClick={this.handleSubmit}>
+                <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517252733/checked_fg1ozl.svg'
+                height='20px'
+                width='20px' />
+            </button>
           </form>
         </div>
         )}
