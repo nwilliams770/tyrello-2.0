@@ -36,8 +36,7 @@ class EditListForm extends React.Component {
     return (e) => this.setState({ [field]: e.currentTarget.value });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
+  handleSubmit() {
     const params = { title: this.state.title, id: this.props.id };
     if (params.title === "") {
       return;
@@ -60,8 +59,6 @@ class EditListForm extends React.Component {
   }
 
   handleOutsideClick(e) {
-
-
     if (this.node.contains(e.target) || e.target === null) {
       return;
     }
@@ -73,10 +70,10 @@ class EditListForm extends React.Component {
 
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick}> {title} </h1>
+        <h1 className='list-item--title' onClick={this.handleClick}> {title} </h1>
         {this.state.visible && (
           <div>
-            <form >
+            <form id='edit-list--form'>
               <input onChange={this.handleChange('title')} defaultValue={title} />
               <button onClick={this.handleSubmit}>
                 <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517252733/checked_fg1ozl.svg'

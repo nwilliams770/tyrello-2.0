@@ -36,7 +36,6 @@ class ListItem extends React.Component {
     return (
       
       <div className='list-item--container'>
-        <h1 className='list-item--title'> {listTitle} </h1>
         <EditListFormContainer title={listTitle} 
                                id={list.id}
                                onUpdate={ this.handleListUpdate.bind(this) } />

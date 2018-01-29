@@ -1024,3 +1024,7 @@ input {
 #edit-board--submit:focus {
   outline: none;
 }
+
+#edit-list--form {
+  margin-top: -9.5%;
+}
