@@ -15,7 +15,7 @@ export const createList = list => (
 
 export const editList = list => (
   $.ajax({
-    method: 'PATH',
+    method: 'PATCH',
     url: `api/lists/${list.id}`,
     data: { list }
   })

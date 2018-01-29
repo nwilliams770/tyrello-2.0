@@ -21,8 +21,20 @@ class Api::ListsController < ApplicationController
     render :show
   end
 
+  def update
+    @list = List.find(list_params[:id])
+    @list.title = list_params[:title]
+    @board = @list.board
+    @lists = @board.lists
+    @list_ids = []
+    @lists.each {|list| @list_ids << list.id}
+    if @list.save!
+      render :show
+    end
+  end
+
   private
   def list_params
-    params.require(:list).permit(:title, :board_id)
+    params.require(:list).permit(:title, :board_id, :id)
   end
 end

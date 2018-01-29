@@ -39,9 +39,10 @@ class BoardShow extends React.Component {
     }
   }
 
-  handleUpdate (updatedName) {
+  handleBoardUpdate (updatedName) {
     this.setState({currentBoardName: updatedName});
   }
+
 
 
 
@@ -62,7 +63,7 @@ class BoardShow extends React.Component {
           <ToolBar />
           <EditBoardFormContainer name= {currentBoardName} 
                                   currentBoardId = {currentBoardId} 
-                                  onUpdate= { this.handleUpdate.bind(this) } />
+                                  onUpdate= { this.handleBoardUpdate.bind(this) } />
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
             <NewListFormContainer />

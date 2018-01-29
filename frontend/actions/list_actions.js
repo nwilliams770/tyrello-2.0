@@ -26,5 +26,5 @@ export const createList = (params) => dispatch => (
 );
 
 export const editList = (params) => dispatch => (
-  APIUtil.editList(params).then(list => dispatch(receiveList(list)))
+  APIUtil.editList(params).then(lists => dispatch(receiveLists(lists)))
 );

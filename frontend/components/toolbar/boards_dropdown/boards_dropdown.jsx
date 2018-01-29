@@ -45,7 +45,7 @@ class BoardsDropdown extends React.Component {
     const passedSharedBoards = this.props.sharedBoards.map((board) => {
       let link = `/boards/${board.id}`;
       return (
-        <Link to={link} className="boards-dropdown--items" >
+        <Link to={link} className="boards-dropdown--items" key={board.id}>
           {board.name}
         </Link>
       );
