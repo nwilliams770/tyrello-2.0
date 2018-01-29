@@ -16,14 +16,10 @@ class Api::BoardsController < ApplicationController
     @shared_boards = current_user.shared_boards
 
     @board_ids = []
-    @boards.each do |board|
-      @board_ids << board.id
-    end
+    @boards.each {|board| @board_ids << board.id }
 
     @shared_board_ids = []
-    @shared_boards.each do |board|
-      @shared_board_ids << board.id
-    end
+    @shared_boards.each {|board| @shared_board_ids << board.id }
 
     @list_ids = []
     @boards.each do |board|
@@ -54,12 +50,35 @@ class Api::BoardsController < ApplicationController
 
   def destroy
     @board = Board.find(params[:id])
+    @board.lists.each do |list|
+      list.cards.each {|card| card.destroy! }
+      list.destroy!
+    end
+
     @board.destroy!
+
+
+    @boards = current_user.boards
+    @shared_boards = current_user.shared_boards 
+
+    @board_ids = []
+    @boards.each {|board| @board_ids << board.id }
+
+    @shared_board_ids = []
+    @shared_boards.each {|board| @shared_board_ids << board.id }
+
+    @list_ids = []
+    @boards.each do |board|
+      board.lists.each do |list|
+        @list_ids << list.id
+      end
+    end
+    render :index
   end
 
   private
 
   def board_params
-    params.require(:board).permit(:name)
+    params.require(:board).permit(:name, :id)
   end
 end

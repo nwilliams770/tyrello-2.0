@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import { fetchLists } from '../../actions/list_actions';
 import { fetchCards } from '../../actions/card_actions';
-import { fetchBoards } from '../../actions/board_actions';
+import { fetchBoards, deleteBoard } from '../../actions/board_actions';
 import { selectLists, selectPersonalBoards} from '../../reducers/selectors';
 
 
@@ -18,7 +18,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchLists: (id) => dispatch(fetchLists(id)),
   fetchCards: (id) => dispatch(fetchCards(id)),
-  fetchBoards: () => dispatch(fetchBoards())
+  fetchBoards: () => dispatch(fetchBoards()),
+  deleteBoard: (id) => dispatch(deleteBoard(id))
 });
 
 export default withRouter(connect(

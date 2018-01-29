@@ -2,6 +2,7 @@ import * as APIUtil from '../util/board_api_util';
 
 export const RECEIVE_BOARDS = "RECEIVE_BOARDS";
 export const RECEIVE_BOARD = "RECEIVE_BOARD";
+export const RECEIVE_UPDATED_BOARDS = "RECEIVE_UPDATED_BOARDS";
 
 export const receiveBoards = boards => ({
   type: RECEIVE_BOARDS,
@@ -11,6 +12,11 @@ export const receiveBoards = boards => ({
 export const receiveBoard = board => ({
   type: RECEIVE_BOARD,
   board
+});
+
+export const receiveUpdatedBoards = boards => ({
+  type: RECEIVE_UPDATED_BOARDS,
+  boards
 });
 
 export const fetchBoards = () => dispatch => (
@@ -29,6 +35,6 @@ export const editBoard = (params) => dispatch => (
   APIUtil.editBoard(params).then(board => dispatch(receiveBoard(board)))
 );
 
-// export const deleteBoard = (params) => dispatch => (
-//   APIUtil.deleteBoard(params).then(board => dispatch())
-// )
+export const deleteBoard = (params) => dispatch => (
+  APIUtil.deleteBoard(params).then(boards => dispatch(receiveUpdatedBoards(boards)))
+);

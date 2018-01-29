@@ -11,6 +11,8 @@ class BoardShow extends React.Component {
   this.state = {
     currentBoardName: ''
   };
+
+  this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -43,8 +45,12 @@ class BoardShow extends React.Component {
     this.setState({currentBoardName: updatedName});
   }
 
+  handleDelete (e) {
+    e.preventDefault();
+    const currentBoardId = this.props.match.params.id;
+    this.props.deleteBoard(currentBoardId).then(this.props.history.push("/boards"));    
 
-
+  }
 
   render() {
     const currentBoardId = this.props.match.params.id;
@@ -64,6 +70,12 @@ class BoardShow extends React.Component {
           <EditBoardFormContainer name= {currentBoardName} 
                                   currentBoardId = {currentBoardId} 
                                   onUpdate= { this.handleBoardUpdate.bind(this) } />
+          <div> 
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516671380/X-icon_ytjbme.svg'
+                 width='20px'
+                 height='20px' />
+            <button id='delete-board--button' onClick={this.handleDelete} > Delete Board </button>
+          </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
             <NewListFormContainer />

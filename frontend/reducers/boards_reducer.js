@@ -3,7 +3,7 @@ import { merge } from 'lodash';
 import {
   RECEIVE_BOARDS,
   RECEIVE_BOARD,
-  RECEIVE_NEW_BOARD
+  RECEIVE_UPDATED_BOARDS
 } from '../actions/board_actions';
 
 const defaultState = ({
@@ -22,6 +22,8 @@ const boardsReducer = (state = defaultState, action) => {
       return merge({}, state, action.boards);
     case RECEIVE_BOARD:
       return merge({}, state, action.board);
+    case RECEIVE_UPDATED_BOARDS:
+      return merge({}, defaultState, action.boards);
     default:
       return state;
   }
