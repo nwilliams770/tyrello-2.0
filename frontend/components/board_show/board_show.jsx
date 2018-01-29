@@ -39,6 +39,10 @@ class BoardShow extends React.Component {
     }
   }
 
+  handleUpdate (updatedName) {
+    this.setState({currentBoardName: updatedName});
+  }
+
 
 
   render() {
@@ -57,7 +61,9 @@ class BoardShow extends React.Component {
         <div className='photo-bg'>
           <ToolBar />
           <h1 id='board-show--current-board'> {currentBoardName} </h1>
-          <EditBoardFormContainer currentBoardName= {currentBoardName} currentBoardId = {currentBoardId}/>
+          <EditBoardFormContainer name= {currentBoardName} 
+                                  currentBoardId = {currentBoardId} 
+                                  onUpdate= { this.handleUpdate.bind(this) } />
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
             <NewListFormContainer />
