@@ -75,16 +75,21 @@ class EditBoardForm extends React.Component {
       <div ref={node => { this.node = node; }} >
         <h1 id='edit-board--header' onClick={this.handleClick}> {name} </h1>
         {this.state.visible && (
-        <div>
-          <form id='edit-board--form'>
-            <input id='edit-board--input' onChange={this.handleChange('name')} defaultValue={name} />
-            <button id='edit-board--submit' onClick={this.handleSubmit}>
-                <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517252733/checked_fg1ozl.svg'
-                height='20px'
-                width='20px' />
-            </button>
-          </form>
-        </div>
+          <div id='edit-board-form--container'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_10/v1516671380/X-icon_ytjbme.svg'
+              width='17px'
+              height='17px'
+              id='new-board-form--exit'
+              onClick={this.handleClick} />
+            <h1 id='list-form--header'> Rename board </h1>
+            <hr id="board-form--underline" />
+            <form>
+              <input id='list-form--input'
+                onChange={this.handleChange('name')}
+                defaultValue={name} />
+              <button id='list-form--submit' onClick={this.handleSubmit}>Rename</button>
+            </form>
+          </div>
         )}
       </div> 
     );

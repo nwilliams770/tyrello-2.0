@@ -747,6 +747,47 @@ input {
   margin-left: 15px;
 }
 
+#board-show--header-container {
+  margin-top: 0.5%;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#delete-board--container {
+  margin-left: 1%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 20px;
+  overflow: hidden;
+}
+
+#delete-board--container:hover {
+  transition: 0.3s ease-in-out;
+  width: 100px;
+}
+
+#delete-board--notify {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  height: 25px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  width: 80px;
+  font-size: 12px;
+  background-color: #EB4127;
+}
+
+#delete-board--icon:hover {
+  cursor: pointer;
+  padding-right: 3px;
+}
+
 .list-item--container {
   margin-top: 15px;
   display: flex;
@@ -969,60 +1010,31 @@ input {
   font-family: "Open-Sans", sans-serif;
   font-size: 22px;
   font-weight: 600;
-  margin-top: 1%;
-  margin-left: 1.5%;
-  display: table;
   border-radius: 3px;
+  display: table;
 }
 
 #edit-board--header:hover {
   transition: 0.3s ease-in-out;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid white;
 }
 
-#edit-board--form {
-  margin-top: -2.4%;
-  margin-left: 1.5%;
-}
-
-#edit-board--input {
-  border: none;
-  border: 1px solid white;
+#edit-board-form--container {
+  width: 300px;
+  height: 125px;
   background: #8EAE59;
-  justify-content: center;
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
   border-radius: 3px;
-}
-
-#edit-board--input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#edit-board--input:focus {
-  outline: none;
-}
-
-#edit-board--submit {
-  background: transparent;
-  border: 1px solid white;
-  margin-left: 1%;
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-  padding: 3px 3px 1px 1px;
-}
-
-#edit-board--submit:hover {
-  background: #8EAE59;
-  transition: 0.3s ease-in-out;
-}
-
-#edit-board--submit:focus {
-  outline: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  margin-left: 1.2%;
+  margin-top: 1.2%;
 }
 
 #edit-list--form {

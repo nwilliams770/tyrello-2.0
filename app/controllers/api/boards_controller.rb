@@ -39,7 +39,7 @@ class Api::BoardsController < ApplicationController
   def update
     @board = Board.find(params[:id])
     @board.name = board_params[:name]
-    @board_id = board_params[:id]
+    @board_id = [board_params[:id]]
 
     if @board.save!
       render :show

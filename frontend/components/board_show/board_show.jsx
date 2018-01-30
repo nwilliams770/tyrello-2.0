@@ -67,14 +67,18 @@ class BoardShow extends React.Component {
       <div className='bg--signup-login'>
         <div className='photo-bg'>
           <ToolBar />
-          <EditBoardFormContainer name= {currentBoardName} 
-                                  currentBoardId = {currentBoardId} 
-                                  onUpdate= { this.handleBoardUpdate.bind(this) } />
-          <div> 
-            <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516671380/X-icon_ytjbme.svg'
-                 width='20px'
-                 height='20px' />
-            <button id='delete-board--button' onClick={this.handleDelete} > Delete Board </button>
+          <div id='board-show--header-container'>
+            <EditBoardFormContainer name= {currentBoardName} 
+                                    currentBoardId = {currentBoardId} 
+                                    onUpdate= { this.handleBoardUpdate.bind(this) } />
+            <div id='delete-board--container'>
+              <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516671380/X-icon_ytjbme.svg'
+                    width='20px'
+                    height='20px'
+                    onClick={this.handleDelete}
+                    id='delete-board--icon' />
+              <p id='delete-board--notify' > Delete Board </p>
+            </div>
           </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }
