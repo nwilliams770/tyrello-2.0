@@ -10,6 +10,8 @@ user2 = User.create(username: "Arya-Stark", email: "AryaStark@me.com", password:
 board1 = Board.create(name: "Revenge List", author_id: user2.id)
 board2 = Board.create(name: "White Walkers 101", author_id: user1.id)
 board3 = Board.create(name: "Emotional Assistance for Wights", author_id: user1.id)
+board4 = Board.create(name: "Shared Testing", author_id: user1.id, shared: true)
+
 
 list1 = List.create(title: "Frost-Resistant Weapons", board_id: board2.id)
 list3 = List.create(title: "Undead Dragon Recipes", board_id: board2.id)
