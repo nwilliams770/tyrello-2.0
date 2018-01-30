@@ -9,6 +9,9 @@ class DeleteListDropdown extends React.Component {
       visible: false
     };
   this.handleDelete = this.handleDelete.bind(this);
+
+  this.handleClick = this.handleClick.bind(this);
+  this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
   handleClick() {
@@ -42,10 +45,11 @@ class DeleteListDropdown extends React.Component {
         <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517263639/three-dots-more-indicator_wfvjbm.svg'
              height='20px'
              width='20px'
-             onClick= {this.handleClick} />
-        <button id='card-form--submit' onClick={this.handleDelete}>Delete List</button>
+             onClick={this.handleClick}
+             id='delete-list-dropdown--icon' />
         {this.state.visible && (
-          <div>
+          <div id='delete-list-dropdown--container'>
+            <p id='delete-list-dropdown--button' onClick={this.handleDelete}>Delete List</p>
           </div>
         )}
       </div>

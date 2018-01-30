@@ -599,11 +599,12 @@ input {
   position: absolute;
   overflow: scroll;
   margin-top: 0.45%;
-  border-radius: 1px;
+  border-radius: 3px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   color: white;
   font-size: 18px;
   font-family: "Lato", sans-serif;
+  z-index: 50;
 }
 
 .boardsdropdown--headers {
@@ -853,7 +854,7 @@ input {
   background: #8EAE59;
   border-radius: 3px;
   z-index: 50;
-  margin-top: -13.3%;
+  margin-top: -13.75%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -861,6 +862,7 @@ input {
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 18px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 #list-form--header {
@@ -1017,7 +1019,7 @@ input {
 #edit-board--header:hover {
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 #edit-board-form--container {
@@ -1035,8 +1037,54 @@ input {
   font-size: 18px;
   margin-left: 1.2%;
   margin-top: 1.2%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 #edit-list--form {
   margin-top: -9.5%;
+}
+
+#delete-list-dropdown--icon {
+  position: absolute;
+  margin-left: 19.5%;
+  margin-top: -0.7%;
+  border-radius: 3px;
+}
+
+#delete-list-dropdown--icon:hover {
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#delete-list-dropdown--container {
+  width: 150px;
+  height: 40px;
+  background: #8EAE59;
+  border-radius: 3px;
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  margin-left: 19.4%;
+  margin-top: 0.5%;
+}
+
+#delete-list-dropdown--button {
+  padding-top: 6%;
+  padding-left: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+}
+
+#delete-list-dropdown--button:hover {
+  transition: 0.3s ease-in-out;
+  background-color: #EB4127;
 }

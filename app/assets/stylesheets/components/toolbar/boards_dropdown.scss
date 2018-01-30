@@ -5,11 +5,12 @@
     position: absolute;
     overflow: scroll;
     margin-top: 0.45%;
-    border-radius: 1px;
-    box-shadow: 0 3px 6px rgba(0,0,0,.4);
+    border-radius: 3px;
+    box-shadow: $popup-shadow;
     color: white;
     font-size: 18px;
     font-family: $body-font;
+    z-index: 50;
 }
 
 .boardsdropdown--headers {

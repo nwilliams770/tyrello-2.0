@@ -10,7 +10,7 @@
 #edit-board--header:hover {
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 #edit-board-form--container {
@@ -28,4 +28,5 @@
   font-size: 18px;
   margin-left: 1.2%;
   margin-top: 1.2%;
+  box-shadow: $popup-shadow;
 }

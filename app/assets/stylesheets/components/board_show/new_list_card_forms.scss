@@ -28,7 +28,7 @@
   background: $green;
   border-radius: 3px;
   z-index: 50;
-  margin-top: -13.3%;
+  margin-top: -13.75%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,7 @@
   color: white;
   font-family: $body-font;
   font-size: 18px;
+  box-shadow: $popup-shadow;
 }
 
 #list-form--header {
