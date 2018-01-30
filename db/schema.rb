@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20171228041836) do
     t.string "name", null: false
     t.integer "author_id", null: false
     t.boolean "starred", default: false, null: false
+    t.boolean "shared", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_boards_on_author_id"
