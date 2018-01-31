@@ -11,9 +11,18 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def index
+    @users = User.top_ten_results(search_params[:query], current_user)
+    render :index
+  end
+
   private
   # allowed for img_url on sign-up
   def user_params
     params.require(:user).permit(:username, :password, :email, :img_url)
+  end
+
+  def search_params
+    params.require(:search).permit(:query)
   end
 end

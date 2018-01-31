@@ -3,6 +3,7 @@ import ToolBar from '../toolbar/toolbar_container';
 import ListItem from './list_item';
 import NewListFormContainer from './new_list_form/new_list_form_container';
 import EditBoardFormContainer from './edit_board/edit_board_form_container';
+import MembersDropdownContainer from './members_dropdown/members_dropdown_container';
 
 class BoardShow extends React.Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class BoardShow extends React.Component {
                     id='delete-board--icon' />
               <p id='delete-board--notify' > Delete Board </p>
             </div>
+            <MembersDropdownContainer />
           </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }

@@ -60,8 +60,6 @@ class EditBoardForm extends React.Component {
   }
 
   handleOutsideClick(e) {
-
-
     if (this.node.contains(e.target) || e.target === null) {
       return;
     }

@@ -22,7 +22,13 @@ class User < ApplicationRecord
     source: :board
 
 
-
+  def self.top_ten_results(query_param, current_user)
+    current_user_id = current_user.id if current_user
+    param = '%' + query_param.downcase + '%'
+    User.where.not(id: current_user_id).
+        where('lower(username) LIKE ? or lower(email) LIKE ?', param, param).limit(10)
+  end
+  
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil

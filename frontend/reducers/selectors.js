@@ -23,7 +23,7 @@ export const selectLists = (state) => {
 };
 
 // export const selectCards = (state) => {
-//   let cardIds = values(state.entities.cards.allListIds);
+//   let caArdIds = values(state.entities.cards.allListIds);
 //   let cards = {};
   
 // }
