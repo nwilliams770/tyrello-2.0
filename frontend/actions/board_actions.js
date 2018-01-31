@@ -1,8 +1,10 @@
 import * as APIUtil from '../util/board_api_util';
+import {createBoardShare} from '../util/board_share_api_util';
 
 export const RECEIVE_BOARDS = "RECEIVE_BOARDS";
 export const RECEIVE_BOARD = "RECEIVE_BOARD";
 export const RECEIVE_UPDATED_BOARDS = "RECEIVE_UPDATED_BOARDS";
+
 
 export const receiveBoards = boards => ({
   type: RECEIVE_BOARDS,
@@ -37,4 +39,8 @@ export const editBoard = (params) => dispatch => (
 
 export const deleteBoard = (params) => dispatch => (
   APIUtil.deleteBoard(params).then(boards => dispatch(receiveUpdatedBoards(boards)))
+);
+
+export const shareBoard = (board_share) => dispatch => (
+  createBoardShare(board_share).then(board => dispatch(receiveBoard(board)))
 );

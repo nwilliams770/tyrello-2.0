@@ -24,6 +24,7 @@ class UserSearch extends React.Component {
   }
 
   render() {
+
     return (
       <div className="UserSearch">
         <input id="UserSearchInput" onChange={this.handleChange} type="text"
@@ -33,7 +34,8 @@ class UserSearch extends React.Component {
           searchItems={Object.values(this.props.userSearchResults)}
           searchVal={this.state.searchVal}
           currentUser={this.props.currentUser}
-          clearState={this.clearState} />
+          currentBoardId={this.props.match.params.id}
+          shareBoard={this.props.shareBoard} />
       </div>
     );
   }

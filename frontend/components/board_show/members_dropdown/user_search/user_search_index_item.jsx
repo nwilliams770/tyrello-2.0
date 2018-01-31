@@ -6,7 +6,16 @@ class UserSearchIndexItem extends React.Component {
 
     this.currentUser = props.currentUser;
     this.user = props.user;
-    // this.state = { following: this.user.followed_by_current_user };
+    this.shareBoard = props.shareBoard;
+    this.handleClick = this.handleClick.bind(this);
+    this.userId = props.userId;
+    this.currentBoardId = props.currentBoardId;
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    const params = {board_id: this.currentBoardId, contributor_id: this.userId};
+    this.props.shareBoard(params);
   }
 
   // handleClick(action) {
@@ -31,12 +40,14 @@ class UserSearchIndexItem extends React.Component {
   // }
 
   render() {
-
-
+  
+    console.log(this.props);
     return (
-      <li>
-        <img src={this.user.img_url} />
-        <p>{"@" + this.user.username}</p>
+      <li onClick={this.handleClick}>
+
+          <img src={this.user.img_url} />
+          <p>{"@" + this.user.username}</p>
+
       </li>
     );
   }
