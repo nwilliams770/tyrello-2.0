@@ -80,6 +80,7 @@ class BoardShow extends React.Component {
                     id='delete-board--icon' />
               <p id='delete-board--notify' > Delete Board </p>
             </div>
+            <p id='bar-divider'> | </p>
             <MembersDropdownContainer />
           </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>

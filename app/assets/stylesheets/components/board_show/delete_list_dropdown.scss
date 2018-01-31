@@ -1,11 +1,9 @@
 #delete-list-dropdown--icon {
-  position: absolute;
-  margin-left: 19.5%;
-  margin-top: -0.7%;
-  border-radius: 3px;
+  margin-top: -6%;
 }
 
 #delete-list-dropdown--icon:hover {
+  border-radius: 3px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.4);
@@ -24,8 +22,7 @@
   font-family: $body-font;
   font-size: 18px;
   box-shadow: $popup-shadow;
-  margin-left: 19.4%;
-  margin-top: 0.5%;
+  margin-top: -0.5%;
 }
 
 #delete-list-dropdown--button {

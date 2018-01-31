@@ -51,6 +51,11 @@
 
 // ******* LIST ITEM ********
 
+.list-item-header--container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .list-item--container {
   margin-top: 15px;
   display: flex;
@@ -65,11 +70,20 @@
   height: min-content;
   max-height: 350px;
   overflow: scroll;
+  justify-content: center;
 }
 
 .list-item--title {
   font-family: $header-font;
   font-size: 18px;
+  border-radius: 3px;
+}
+
+.list-item--title:hover {
+  transition: 0.3s ease-in-out;
+  background-color: $green;
+  display: table;
+  cursor: pointer; 
 }
 
 // ******* CARD ITEM ********
@@ -88,4 +102,14 @@
 
 .card-item--title {
   margin-left: 2%;
+}
+
+#bar-divider {
+  color: white;
+  font-family: $header-font;
+  font-size: 22px;
+  font-weight: 400;
+  display: table;
+  margin-left: 1%;
+  margin-right: 1%;
 }

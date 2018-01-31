@@ -43,10 +43,10 @@ class DeleteListDropdown extends React.Component {
     return (
       <div ref={node => { this.node = node; }} >
         <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517263639/three-dots-more-indicator_wfvjbm.svg'
-             height='20px'
-             width='20px'
-             onClick={this.handleClick}
-             id='delete-list-dropdown--icon' />
+            height='20px'
+            width='20px'
+            onClick={this.handleClick}
+            id='delete-list-dropdown' />
         {this.state.visible && (
           <div id='delete-list-dropdown--container'>
             <p id='delete-list-dropdown--button' onClick={this.handleDelete}>Delete List</p>

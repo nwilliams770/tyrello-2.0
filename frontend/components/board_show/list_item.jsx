@@ -37,10 +37,12 @@ class ListItem extends React.Component {
     return (
       
       <div className='list-item--container'>
-        <DeleteListDropdownContainer id={list.id} />
-        <EditListFormContainer title={listTitle} 
-                               id={list.id}
-                               onUpdate={ this.handleListUpdate.bind(this) } />
+        <div className='list-item-header--container'>
+          <EditListFormContainer title={listTitle} 
+                                id={list.id}
+                                onUpdate={ this.handleListUpdate.bind(this) } />
+          <DeleteListDropdownContainer id={list.id} />
+        </div>
         {cardItems}
         <NewCardFormContainer listId={list.id} />
       </div>

@@ -1,0 +1,16 @@
+#members--header {
+  color: white;
+  font-family: $header-font;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 3px;
+  padding: 2px;
+  display: table;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#members--header:hover {
+  transition: 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}

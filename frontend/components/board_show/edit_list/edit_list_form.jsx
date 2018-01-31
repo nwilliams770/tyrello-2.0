@@ -62,7 +62,13 @@ class EditListForm extends React.Component {
     if (this.node.contains(e.target) || e.target === null) {
       return;
     }
-    this.handleClick();
+
+    if (this.state.title !== this.props.title ) {
+      this.handleSubmit().handleClick();
+    } else {
+      this.handleClick();
+    }
+    
   }
 
   render() {

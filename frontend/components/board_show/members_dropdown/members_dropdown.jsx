@@ -34,7 +34,7 @@ class MembersDropdown extends React.Component {
   render() {
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick}> Members </h1>
+        <h1 onClick={this.handleClick} id='members--header'> Members </h1>
         {this.state.visible && (
           <div>
             <UserSearchContainer />
