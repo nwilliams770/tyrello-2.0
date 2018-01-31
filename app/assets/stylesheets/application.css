@@ -1065,7 +1065,23 @@ input {
 }
 
 #edit-list--form {
-  margin-top: -9.5%;
+  margin-top: -11%;
+}
+
+#edit-list--input {
+  background: #8EAE59;
+  color: white;
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 100%;
+  height: 25px;
+}
+
+#edit-list--input:focus {
+  outline: none;
 }
 
 #delete-list-dropdown--icon {

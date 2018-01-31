@@ -80,12 +80,7 @@ class EditListForm extends React.Component {
         {this.state.visible && (
           <div>
             <form id='edit-list--form'>
-              <input onChange={this.handleChange('title')} defaultValue={title} />
-              <button onClick={this.handleSubmit}>
-                <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517252733/checked_fg1ozl.svg'
-                  height='20px'
-                  width='20px' />
-              </button>
+              <input autoFocus id='edit-list--input' onChange={this.handleChange('title')} defaultValue={title} />
             </form>
           </div>
         )}
