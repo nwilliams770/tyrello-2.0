@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :boards, except: [ :new ]
     resources :lists, except: [ :new ]
     resources :cards, except: [ :new ]
+
+    match 'users/:boardId', to: 'users#show_shared', via: [:get]
   end
+  
   root "static_pages#root"
 end

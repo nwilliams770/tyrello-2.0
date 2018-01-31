@@ -16,6 +16,14 @@ class Api::UsersController < ApplicationController
     render :index
   end
 
+  def show_shared
+    @board_shares = BoardShare.where(board_id: params[:id])
+    @shared_with_users = []
+
+    @board_shares.each {|board_share| @shared_with_users << board_share.user }
+    render :show_shared
+  end
+
   private
   # allowed for img_url on sign-up
   def user_params
@@ -24,5 +32,9 @@ class Api::UsersController < ApplicationController
 
   def search_params
     params.require(:search).permit(:query)
+  end
+
+  def user_show_params
+    params.require(:params).permit(:board_id)
   end
 end

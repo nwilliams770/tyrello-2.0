@@ -26,7 +26,7 @@ class User < ApplicationRecord
     current_user_id = current_user.id if current_user
     param = '%' + query_param.downcase + '%'
     User.where.not(id: current_user_id).
-        where('lower(username) LIKE ? or lower(email) LIKE ?', param, param).limit(10)
+        where('lower(username) LIKE ? or lower(email) LIKE ?', param, param).limit(5)
   end
   
   def self.find_by_credentials(username, password)

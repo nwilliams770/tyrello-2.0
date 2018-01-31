@@ -24,18 +24,24 @@ class UserSearch extends React.Component {
   }
 
   render() {
+  
 
     return (
       <div className="UserSearch">
         <input id="UserSearchInput" onChange={this.handleChange} type="text"
           placeholder="Search for a user"
           value={this.state.searchVal}></input>
+
+        <ul> {this.props.sharedWith} </ul>
+        
         <UserSearchIndex id="UserSearchUL" firstTime={this.state.firstTime}
           searchItems={Object.values(this.props.userSearchResults)}
           searchVal={this.state.searchVal}
           currentUser={this.props.currentUser}
           currentBoardId={this.props.match.params.id}
-          shareBoard={this.props.shareBoard} />
+          shareBoard={this.props.shareBoard}
+          fetchShared={this.props.fetchShared}
+          handleShare={this.handleSharedWith} />
       </div>
     );
   }

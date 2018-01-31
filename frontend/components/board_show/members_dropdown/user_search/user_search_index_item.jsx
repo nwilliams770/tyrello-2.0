@@ -15,29 +15,8 @@ class UserSearchIndexItem extends React.Component {
   handleClick(e) {
     e.preventDefault();
     const params = {board_id: this.currentBoardId, contributor_id: this.userId};
-    this.props.shareBoard(params);
+    this.props.shareBoard(params).then(this.props.handleShare(this.user.username));
   }
-
-  // handleClick(action) {
-  //   return (e) => {
-  //     e.preventDefault();
-  //     if (action === "follow") {
-  //       let oppositeCurrentFollowing = !this.state.following;
-  //       this.setState({ following: oppositeCurrentFollowing }, () => {
-  //         this.followUser(this.user.id, this.currentUser.id, this.props.feedType, this.props.profileUser);
-  //         // this.currentUser.followees += 1;
-  //         // this.updateCurrentUser(this.currentUser);
-  //       });
-  //     } else {
-  //       let oppositeCurrentFollowing = !this.state.following;
-  //       this.setState({ following: oppositeCurrentFollowing }, () => {
-  //         this.unfollowUser(this.user.id, this.currentUser.id, this.props.feedType, this.props.profileUser);
-  //         // this.currentUser.followees -= 1;
-  //         // this.updateCurrentUser(this.currentUser);
-  //       });
-  //     }
-  //   };
-  // }
 
   render() {
   

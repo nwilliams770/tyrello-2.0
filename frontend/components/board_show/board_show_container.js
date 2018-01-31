@@ -12,7 +12,7 @@ import BoardShow from './board_show';
 const mapStateToProps = state => ({
   lists: selectLists(state),
   boards: state.entities.boards.byId,
-  cards: state.entities.cards
+  cards: state.entities.cards,
 });
 
 const mapDispatchToProps = dispatch => ({

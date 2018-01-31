@@ -2,15 +2,18 @@ import { connect } from 'react-redux';
 
 import MembersDropdown from './members_dropdown';
 
+import { selectSharedWithUsers } from '../../../reducers/selectors';
+import { fetchShared } from '../../../actions/user_actions';
+
 const mapStateToProps = state => ({
- 
+  sharedWith: selectSharedWithUsers(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  // eventually have to fetch all users for the board
+  fetchShared: (id) => dispatch(fetchShared(id))
 });
 
 export default connect(
-  null,
-  null
+  mapStateToProps,
+  mapDispatchToProps
 )(MembersDropdown);

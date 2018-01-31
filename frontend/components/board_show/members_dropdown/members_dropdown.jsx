@@ -13,6 +13,22 @@ class MembersDropdown extends React.Component {
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchShared(this.props.currentBoardId).then(() => this.setState({ sharedWith: this.props.sharedWith }));
+  }
+
+  componentWillReceiveProps(nextProps) {
+    console.log("HIT EWILL RECEIVE NEW PROPS");
+    console.log(nextProps);
+    if (this.state.sharedWith !== nextProps.sharedWith) {
+      this.setState({ sharedWith: nextProps.sharedWith });
+    }
+  }
+
+  // shouldComponentUpdate(nextProps) {
+  //   return this.state.sharedWith !== nextProps.sharedWith;
+  // }
+
   handleClick() {
     if (!this.state.visible) {
       document.addEventListener('click', this.handleOutsideClick, false);
@@ -31,13 +47,19 @@ class MembersDropdown extends React.Component {
     this.handleClick();
   }
 
+  handleSharedWith(updatedName) {
+    this.setState({ sharedWith: this.props.sharedWith.concat([updatedName]) });
+  }
+
   render() {
+    const sharedWith = this.props.sharedWith;
+
     return (
       <div ref={node => { this.node = node; }} >
         <h1 onClick={this.handleClick} id='members--header'> Members </h1>
         {this.state.visible && (
           <div>
-            <UserSearchContainer />
+            <UserSearchContainer sharedWith={sharedWith} handleShare={this.handleSharedWith.bind(this)} />
             <h1> current members </h1>
             <p> user search goes here </p>
           </div>

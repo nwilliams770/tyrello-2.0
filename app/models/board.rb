@@ -8,4 +8,5 @@ class Board < ApplicationRecord
     primary_key: :id,
     foreign_key: :board_id,
     class_name: :List
+  
 end
