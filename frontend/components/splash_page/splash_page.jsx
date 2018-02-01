@@ -25,7 +25,7 @@ class SplashPage extends React.Component {
     return (
       <div className='bg'>
         <video playbackRate='0.4' autoPlay loop className="fullscreen-bg fullscreen-bg-video">
-          <source src="http://res.cloudinary.com/nwilliams770/video/upload/v1515454667/Temps_Des_Fleurs_dspllq.mp4" type="video/mp4" />
+          <source src="http://res.cloudinary.com/nwilliams770/video/upload/v1517512964/Temps_Des_Fleurs_SLOWED_qi9sow.mp4" type="video/mp4" />
         </video>
         <div className='logo'></div>
         <div className='splash--copy'>

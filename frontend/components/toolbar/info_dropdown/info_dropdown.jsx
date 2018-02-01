@@ -44,7 +44,10 @@ class InfoDropdown extends React.Component {
           <div className='info-dropdown--container'>
             <h1 id='info-dropdown--header'> Welcome to Tyrello!</h1>
             <hr id="session-dropdown--underline" />
-            <p> Lorem ipsum </p>
+            <p className='info-body'>   A Tyrello board is a list of lists, filled with cards, to help you break down daunting projects
+                into tasks. </p>
+                
+              <p className='info-body-btm'> Happy exploring! </p>
             <p> Created by <a target='_blank' id='github--link' href='https://github.com/nwilliams770'>Nicholas Williams</a> </p>
           </div>
         )}
