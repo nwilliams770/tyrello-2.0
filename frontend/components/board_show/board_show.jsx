@@ -55,9 +55,10 @@ class BoardShow extends React.Component {
   }
 
   render() {
-    const currentBoardId = this.props.match.params.id;
+    const currentBoard = this.props.boards[this.props.match.params.id];
     const currentBoardName = this.state.currentBoardName;
-
+    const currentBoardId = this.props.match.params.id;
+  
     const lists = this.props.lists.map((list) => { 
       const cards = this.props.cards.byListId[list.id] === undefined ? [] : this.props.cards.byListId[list.id];
       return <ListItem key={list.id}

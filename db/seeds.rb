@@ -7,7 +7,7 @@ Card.destroy_all
 user1 = User.create(username: "Sansa-Stark", email: "SansaStark@me.com", password: "password")
 user2 = User.create(username: "Arya-Stark", email: "AryaStark@me.com", password: "password2")
 
-board1 = Board.create(name: "Revenge List", author_id: user2.id)
+board1 = Board.create(name: "Revenge List", author_id: user2.id, shared:true)
 board2 = Board.create(name: "White Walkers 101", author_id: user1.id)
 board3 = Board.create(name: "Emotional Assistance for Wights", author_id: user1.id)
 board4 = Board.create(name: "Shared Testing", author_id: user1.id, shared: true)

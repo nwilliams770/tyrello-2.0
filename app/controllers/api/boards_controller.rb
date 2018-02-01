@@ -27,7 +27,10 @@ class Api::BoardsController < ApplicationController
         @list_ids << list.id
       end
     end
+    
     render :index
+
+
   end
 
   def show

@@ -6,7 +6,12 @@ import { selectSharedWithUsers } from '../../../reducers/selectors';
 import { fetchShared } from '../../../actions/user_actions';
 
 const mapStateToProps = state => ({
-  sharedWith: Object.values(state.entities.sharedWith)
+  sharedWith: Object.values(state.entities.sharedWith),
+  currentUser: state.session.currentUser
+});
+
+const mapDispatchToProps = dispatch => ({
+
 });
 
 

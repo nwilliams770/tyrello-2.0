@@ -6,11 +6,10 @@
   border-radius: 3px;
   padding: 2px;
   display: table;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .members-share--header:hover {
   transition: 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }

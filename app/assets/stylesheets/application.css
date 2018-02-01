@@ -846,8 +846,8 @@ input {
   font-size: 22px;
   font-weight: 400;
   display: table;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 .new-list--container {
@@ -1134,11 +1134,10 @@ input {
   border-radius: 3px;
   padding: 2px;
   display: table;
-  background: rgba(255, 255, 255, 0.4);
 }
 
 .members-share--header:hover {
   transition: 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
 }

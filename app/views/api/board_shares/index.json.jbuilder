@@ -2,13 +2,13 @@ json.boards do
   json.byId do
     @boards.each do |board|
       json.set! board.id do
-        json.extract! board, :id, :name, :starred, :shared
+        json.extract! board, :id, :name, :shared, :author_id
       end
     end
 
     @shared_boards.each do |board|
       json.set! board.id do
-        json.extract! board, :id, :name, :starred
+        json.extract! board, :id, :name, :shared, :author_id
       end
     end
   end

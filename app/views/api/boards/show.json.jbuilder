@@ -1,6 +1,6 @@
 json.byId do
     json.set! @board.id do
-      json.extract! @board, :id, :name, :starred
+      json.extract! @board, :id, :name, :shared, :author_id
     end
 end
 

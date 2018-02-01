@@ -11,7 +11,7 @@ class MembersDropdown extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
-  
+
   handleClick() {
     if (!this.state.visible) {
       document.addEventListener('click', this.handleOutsideClick, false);
@@ -36,15 +36,21 @@ class MembersDropdown extends React.Component {
     const sharedWith = this.props.sharedWith.map((user) => (
       <li> {user.username} </li>));
     
+    const currentUsername = this.props.currentUser.username;
+    const currentBoardId = this.props.currentBoardId;
 
     return (
       <div ref={node => { this.node = node; }} >
         <h1 onClick={this.handleClick} className='members-share--header'> Members </h1>
         {this.state.visible && (
-          <ul>
-            {sharedWith}
-            <h1> Test </h1>
-          </ul>
+          <div className='board-header--dropdown'>
+            <h1 className='members-dropdown--header'>Owner</h1>
+            <p> {currentUsername} </p>
+            <h1 className='members-dropdown--header'>Contributors</h1>
+            <ul>
+              {sharedWith.length > 0 ? sharedWith : <p> You're flying solo here </p> }
+            </ul>
+          </div>
         )}
       </div>
     );

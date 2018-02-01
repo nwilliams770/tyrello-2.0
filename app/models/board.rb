@@ -9,4 +9,5 @@ class Board < ApplicationRecord
     foreign_key: :board_id,
     class_name: :List
   
+
 end
