@@ -14,9 +14,11 @@
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -26,6 +28,8 @@
     "test": "test"
   },
   "scripts": {
+    "postinstall": "webpack",
+    "start": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,5 +42,9 @@
   "bugs": {
     "url": "https://github.com/nwilliams770/tyrello-2.0/issues"
   },
-  "homepage": "https://github.com/nwilliams770/tyrello-2.0#readme"
+  "homepage": "https://github.com/nwilliams770/tyrello-2.0#readme",
+  "engines": {
+    "node": "6.10.1",
+    "npm": "5.5.1"
+  }
 }

@@ -47,8 +47,8 @@ class UserSearch extends React.Component {
         <h1 onClick={this.handleClick} className='members-share--header' > Share </h1>
 
        {this.state.visible && (
-         <div>
-          <input id="UserSearchInput" onChange={this.handleChange} type="text"
+         <div className='user-search--container'>
+          <input id="user-search-input" onChange={this.handleChange} type="text"
             placeholder="Search for a user"
             value={this.state.searchVal}></input>
 

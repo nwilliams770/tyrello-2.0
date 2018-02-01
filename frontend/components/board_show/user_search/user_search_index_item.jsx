@@ -19,8 +19,6 @@ class UserSearchIndexItem extends React.Component {
   }
 
   render() {
-  
-    console.log(this.props);
     return (
       <li onClick={this.handleClick}>
 

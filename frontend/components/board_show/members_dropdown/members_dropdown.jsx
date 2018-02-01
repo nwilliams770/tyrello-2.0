@@ -45,9 +45,9 @@ class MembersDropdown extends React.Component {
         {this.state.visible && (
           <div className='board-header--dropdown'>
             <h1 className='members-dropdown--header'>Owner</h1>
-            <p> {currentUsername} </p>
+            <p className='members-dropdown--item'> {currentUsername} </p>
             <h1 className='members-dropdown--header'>Contributors</h1>
-            <ul>
+            <ul className='members-dropdown--item'>
               {sharedWith.length > 0 ? sharedWith : <p> You're flying solo here </p> }
             </ul>
           </div>

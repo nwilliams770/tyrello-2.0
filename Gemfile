@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1.7'
+gem 'rails_12factor'
 
 
 group :development, :test do

@@ -1,3 +1,51 @@
+// ********* MEMBERS DROPDOWN
+
 .board-header--dropdown {
+  width: 180px;
+  min-height: 150px;
+  background-color: $green;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  color: white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.board-header--dropdown:hover {
+  cursor: default;
+}
+.members-dropdown--header {
+  font-family: $body-font;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 2%;
+}
+
+.members-dropdown--item {
+  font-family: $body-font;
+  font-size: 14px;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+// ****** USER SEARCH DROPDOWN
+
+.user-search--container {
+  width: 180px;
+  min-height: 150px;
+  background-color: $green;
+  border-radius: 3px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  color: white;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.user-search-input {
   
+}
+.user-search-input:focus {
+  outline: none;
 }
