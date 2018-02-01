@@ -4,6 +4,7 @@ import ListItem from './list_item';
 import NewListFormContainer from './new_list_form/new_list_form_container';
 import EditBoardFormContainer from './edit_board/edit_board_form_container';
 import MembersDropdownContainer from './members_dropdown/members_dropdown_container';
+import UserSearchContainer from './user_search/user_search_container';
 
 class BoardShow extends React.Component {
   constructor(props) {
@@ -80,8 +81,10 @@ class BoardShow extends React.Component {
                     id='delete-board--icon' />
               <p id='delete-board--notify' > Delete Board </p>
             </div>
-            <p id='bar-divider'> | </p>
-            <MembersDropdownContainer currentBoardId = {currentBoardId} />
+            <p className='bar-divider'> | </p>
+            <MembersDropdownContainer currentBoardId={currentBoardId} />
+            <p className='bar-divider'> | </p>
+            <UserSearchContainer currentBoardId={currentBoardId} />
           </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }

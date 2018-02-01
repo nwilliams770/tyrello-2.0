@@ -840,7 +840,7 @@ input {
   margin-left: 2%;
 }
 
-#bar-divider {
+.bar-divider {
   color: white;
   font-family: "Open-Sans", sans-serif;
   font-size: 22px;
@@ -1126,7 +1126,7 @@ input {
   background-color: #EB4127;
 }
 
-#members--header {
+.members-share--header {
   color: white;
   font-family: "Open-Sans", sans-serif;
   font-size: 22px;
@@ -1137,7 +1137,7 @@ input {
   background: rgba(255, 255, 255, 0.4);
 }
 
-#members--header:hover {
+.members-share--header:hover {
   transition: 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.7);
   cursor: pointer;

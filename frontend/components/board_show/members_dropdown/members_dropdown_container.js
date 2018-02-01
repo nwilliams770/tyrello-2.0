@@ -6,14 +6,11 @@ import { selectSharedWithUsers } from '../../../reducers/selectors';
 import { fetchShared } from '../../../actions/user_actions';
 
 const mapStateToProps = state => ({
-  sharedWith: selectSharedWithUsers(state)
+  sharedWith: Object.values(state.entities.sharedWith)
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchShared: (id) => dispatch(fetchShared(id))
-});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  null
 )(MembersDropdown);

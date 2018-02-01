@@ -1,5 +1,4 @@
 import React from 'react';
-import UserSearchContainer from './user_search/user_search_container';
 
 class MembersDropdown extends React.Component {
   constructor(props) {
@@ -12,23 +11,7 @@ class MembersDropdown extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
   }
-
-  componentDidMount() {
-    this.props.fetchShared(this.props.currentBoardId).then(() => this.setState({ sharedWith: this.props.sharedWith }));
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log("HIT EWILL RECEIVE NEW PROPS");
-    console.log(nextProps);
-    if (this.state.sharedWith !== nextProps.sharedWith) {
-      this.setState({ sharedWith: nextProps.sharedWith });
-    }
-  }
-
-  // shouldComponentUpdate(nextProps) {
-  //   return this.state.sharedWith !== nextProps.sharedWith;
-  // }
-
+  
   handleClick() {
     if (!this.state.visible) {
       document.addEventListener('click', this.handleOutsideClick, false);
@@ -47,22 +30,21 @@ class MembersDropdown extends React.Component {
     this.handleClick();
   }
 
-  handleSharedWith(updatedName) {
-    this.setState({ sharedWith: this.props.sharedWith.concat([updatedName]) });
-  }
+
 
   render() {
-    const sharedWith = this.props.sharedWith;
+    const sharedWith = this.props.sharedWith.map((user) => (
+      <li> {user.username} </li>));
+    
 
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick} id='members--header'> Members </h1>
+        <h1 onClick={this.handleClick} className='members-share--header'> Members </h1>
         {this.state.visible && (
-          <div>
-            <UserSearchContainer sharedWith={sharedWith} handleShare={this.handleSharedWith.bind(this)} />
-            <h1> current members </h1>
-            <p> user search goes here </p>
-          </div>
+          <ul>
+            {sharedWith}
+            <h1> Test </h1>
+          </ul>
         )}
       </div>
     );

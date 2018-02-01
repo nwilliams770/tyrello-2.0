@@ -1,6 +1,7 @@
 class Api::BoardSharesController < ApplicationController
   def create
     @board_share = BoardShare.new(board_share_params)
+
     if @board_share.save!
       @board = Board.find(board_share_params[:board_id])
       @board.shared = true
@@ -15,12 +16,7 @@ class Api::BoardSharesController < ApplicationController
       @shared_board_ids = []
       @shared_boards.each {|board| @shared_board_ids << board.id }
 
-      @list_ids = []
-      @boards.each do |board|
-      board.lists.each do |list|
-        @list_ids << list.id
-        end
-      end
+      @shared_with_user = User.find(board_share_params[:contributor_id])
     end
     render :index
   end
