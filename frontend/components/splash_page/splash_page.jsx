@@ -1,13 +1,17 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
-
-
 
 class SplashPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.demoLogin = this.demoLogin.bind(this);
+    this.state = { in : false };
+  }
+
+  componentDidMount() {
+    this.setState({ in: true });
   }
 
   demoLogin(e) {
@@ -17,14 +21,13 @@ class SplashPage extends React.Component {
       fadeOuts[i].classList.add('slide-up-fade-in-reverse');
     }
 
-    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 1500);
-
+    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 1250);
   }
 
   render() {
     return (
       <div className='bg'>
-        <video playbackRate='0.4' autoPlay loop className="fullscreen-bg fullscreen-bg-video">
+        <video autoPlay loop className="fullscreen-bg fullscreen-bg-video">
           <source src="http://res.cloudinary.com/nwilliams770/video/upload/v1517512964/Temps_Des_Fleurs_SLOWED_qi9sow.mp4" type="video/mp4" />
         </video>
         <div className='logo'></div>
