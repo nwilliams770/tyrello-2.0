@@ -7,12 +7,9 @@ class SplashPage extends React.Component {
     super(props);
 
     this.demoLogin = this.demoLogin.bind(this);
-    this.state = { in : false };
   }
 
-  componentDidMount() {
-    this.setState({ in: true });
-  }
+
 
   demoLogin(e) {
     e.preventDefault();
