@@ -5,3 +5,11 @@ export const createBoardShare = board_share => {
     data: { board_share }
   });
 };
+
+export const fetchSharedUsers = id => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/board_shares/`,
+    data: { id }
+  });
+};

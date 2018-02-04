@@ -21,8 +21,23 @@ class Api::BoardSharesController < ApplicationController
     render :index
   end
 
+  def index
+    @board = Board.find(params[:id])
+    @owner = @board.user
+    @shares = [BoardShare.find_by(board_id: params[:id])]
+    @shared_withs = [@owner]
+    @shares.each {|board_share| @shared_withs << board_share.user }
+    
+    render :show
+  end
+
+
   private
   def board_share_params
     params.require(:board_share).permit(:board_id, :contributor_id)
+  end
+
+  def shared_user_params
+    params.require(:board_id).permit(:id)
   end
 end

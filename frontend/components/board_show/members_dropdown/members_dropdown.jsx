@@ -5,11 +5,23 @@ class MembersDropdown extends React.Component {
     super(props);
 
     this.state = {
-      visible: false
+      visible: false,
+      sharedWith: []
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
+  }
+
+  componentDidMount() {
+    const currentBoardId = this.props.currentBoardId;
+    this.props.fetchSharedWithUsers(currentBoardId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.sharedWith !== nextProps.sharedWith) {
+      this.setState({ sharedWith: nextProps.sharedWith });
+    }
   }
 
   handleClick() {
@@ -33,9 +45,25 @@ class MembersDropdown extends React.Component {
 
 
   render() {
-    const sharedWith = this.props.sharedWith.map((user) => (
-      <li> {user.username} </li>));
-    
+    console.log("SHARED WITH");
+    console.log(this.state.sharedWith);
+    const sharedWith = Object.values(this.state.sharedWith).map(user => {
+      console.log("indexing properly??");
+      console.log(user['username']);
+      return <li> {user.id} {user.username} {user.img_url} </li>;
+    });
+
+    console.log("SHARED WITH MAPPED OUT");
+    console.log(sharedWith);
+
+    // let sharedWith;
+    // if (this.props.sharedWithUsers) {
+    //   sharedWith = this.props.sharedWithUsers.map((user) => (
+    //   <li key={user.id}> {user.username} </li>));
+    // }
+
+
+
     const currentUsername = this.props.currentUser.username;
     const currentBoardId = this.props.currentBoardId;
 
@@ -48,7 +76,7 @@ class MembersDropdown extends React.Component {
             <p className='members-dropdown--item'> {currentUsername} </p>
             <h1 className='members-dropdown--header'>Contributors</h1>
             <ul className='members-dropdown--item'>
-              {sharedWith.length > 0 ? sharedWith : <p> You're flying solo here </p> }
+              {sharedWith}
             </ul>
           </div>
         )}

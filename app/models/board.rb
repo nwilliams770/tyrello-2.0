@@ -9,5 +9,8 @@ class Board < ApplicationRecord
     foreign_key: :board_id,
     class_name: :List
   
-
+  has_many :contributors,
+    primary_key: :id,
+    foreign_key: :board_id,
+    class_name: :User
 end

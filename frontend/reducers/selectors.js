@@ -23,11 +23,8 @@ export const selectLists = (state) => {
 };
 
 export const selectSharedWithUsers = (state) => {
-  return Object.values(state.entities.sharedWith).map(user => user.username);
+  let userIds = keys(state.entities.sharedWith.users);
+  let sharedWithUsers = userIds.map(id => (state.entities.sharedWith.users[id]));
+  return sharedWithUsers;
 };
 
-// export const selectCards = (state) => {
-//   let caArdIds = values(state.entities.cards.allListIds);
-//   let cards = {};
-  
-// }
