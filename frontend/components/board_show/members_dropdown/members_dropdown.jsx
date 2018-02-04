@@ -45,23 +45,10 @@ class MembersDropdown extends React.Component {
 
 
   render() {
-
     const sharedWith = Object.values(this.state.sharedWith).map(user => {
       return <p className='shared-with--item'> {user.username} </p>;
     });
-
     const owner = sharedWith[0];
-
-
-
-    // let sharedWith;
-    // if (this.props.sharedWithUsers) {
-    //   sharedWith = this.props.sharedWithUsers.map((user) => (
-    //   <li key={user.id}> {user.username} </li>));
-    // }
-
-
-
     const currentUsername = this.props.currentUser.username;
     const currentBoardId = this.props.currentBoardId;
 
