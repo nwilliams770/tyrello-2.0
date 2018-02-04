@@ -45,16 +45,14 @@ class MembersDropdown extends React.Component {
 
 
   render() {
-    console.log("SHARED WITH");
-    console.log(this.state.sharedWith);
+
     const sharedWith = Object.values(this.state.sharedWith).map(user => {
-      console.log("indexing properly??");
-      console.log(user['username']);
-      return <li> {user.id} {user.username} {user.img_url} </li>;
+      return <p className='shared-with--item'> {user.username} </p>;
     });
 
-    console.log("SHARED WITH MAPPED OUT");
-    console.log(sharedWith);
+    const owner = sharedWith[0];
+
+
 
     // let sharedWith;
     // if (this.props.sharedWithUsers) {
@@ -73,11 +71,9 @@ class MembersDropdown extends React.Component {
         {this.state.visible && (
           <div className='board-header--dropdown'>
             <h1 className='members-dropdown--header'>Owner</h1>
-            <p className='members-dropdown--item'> {currentUsername} </p>
+              {owner}
             <h1 className='members-dropdown--header'>Contributors</h1>
-            <ul className='members-dropdown--item'>
-              {sharedWith}
-            </ul>
+              {sharedWith.splice(1)}
           </div>
         )}
       </div>
