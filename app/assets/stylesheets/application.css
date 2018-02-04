@@ -1104,7 +1104,7 @@ input {
   font-family: "Lato", sans-serif;
   font-size: 18px;
   margin-left: 1.2%;
-  margin-top: 1.2%;
+  margin-top: 0.8%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -1201,6 +1201,10 @@ input {
   cursor: pointer;
 }
 
+.share-bttn:focus {
+  outline: none;
+}
+
 .board-header--dropdown {
   width: 180px;
   min-height: 150px;
@@ -1211,6 +1215,8 @@ input {
   color: white;
   padding: 10px 15px;
   box-sizing: border-box;
+  margin-left: -7%;
+  margin-top: 0.5%;
 }
 
 .board-header--dropdown:hover {
@@ -1241,6 +1247,8 @@ input {
   color: white;
   padding: 10px 15px;
   box-sizing: border-box;
+  margin-top: 0.5%;
+  margin-left: -12%;
 }
 
 .user-search-input:focus {
