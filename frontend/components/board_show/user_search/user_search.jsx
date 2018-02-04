@@ -44,7 +44,11 @@ class UserSearch extends React.Component {
 
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 onClick={this.handleClick} className='members-share--header' > Share </h1>
+        <button className='share-bttn' onClick={this.handleClick}>
+          <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1517714214/plus-black-symbol_uuxzvb.svg'
+            height='15px'
+            width='15px' />
+        </button>
 
        {this.state.visible && (
          <div className='user-search--container'>

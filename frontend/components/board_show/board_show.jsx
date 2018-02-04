@@ -71,21 +71,26 @@ class BoardShow extends React.Component {
         <div className='photo-bg'>
           <ToolBar />
           <div id='board-show--header-container'>
-            <EditBoardFormContainer name= {currentBoardName} 
-                                    currentBoardId = {currentBoardId} 
-                                    onUpdate= { this.handleBoardUpdate.bind(this) } />
-            <div id='delete-board--container'>
-              <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516671380/X-icon_ytjbme.svg'
-                    width='20px'
-                    height='20px'
-                    onClick={this.handleDelete}
-                    id='delete-board--icon' />
-              <p id='delete-board--notify' > Delete Board </p>
-            </div>
-            <p className='bar-divider'> | </p>
-            <MembersDropdownContainer currentBoardId={currentBoardId} />
-            <p className='bar-divider'> | </p>
-            <UserSearchContainer currentBoardId={currentBoardId} />
+              <div className='board-show-header--left-buttons'>
+              <EditBoardFormContainer name= {currentBoardName} 
+                                      currentBoardId = {currentBoardId} 
+                                      onUpdate= { this.handleBoardUpdate.bind(this) } />
+              <div id='delete-board--container'>
+                <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516671380/X-icon_ytjbme.svg'
+                      width='20px'
+                      height='20px'
+                      onClick={this.handleDelete}
+                      id='delete-board--icon' />
+                <p id='delete-board--notify' > Delete Board </p>
+              </div>
+              </div>
+
+
+              <div className='board-show-header--right-buttons'> 
+              <MembersDropdownContainer currentBoardId={currentBoardId} />
+              <UserSearchContainer currentBoardId={currentBoardId}/>
+              </div>
+
           </div>
           <ul className='board-show--lists slide-up-fade-in--boards'>
             { lists }

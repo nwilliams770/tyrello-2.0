@@ -781,6 +781,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 #delete-board--container {
@@ -875,6 +876,22 @@ input {
   display: table;
   margin-left: 0.5%;
   margin-right: 0.5%;
+}
+
+.board-show-header--right-buttons {
+  margin-right: 1.5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 135px;
+}
+
+.board-show-header--left-buttons {
+  display: flex;
+  flex-direction: row;
+  min-width: 500px;
+  align-items: center;
 }
 
 .new-list--container {
@@ -1164,6 +1181,21 @@ input {
 }
 
 .members-share--header:hover {
+  transition: 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.share-bttn {
+  border: 1px solid white;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: transparent;
+}
+
+.share-bttn:hover {
   transition: 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.4);
   cursor: pointer;
