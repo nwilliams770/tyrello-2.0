@@ -72,7 +72,7 @@ class MembersDropdown extends React.Component {
           <div className='board-header--dropdown'>
             <h1 className='members-dropdown--header'>Owner</h1>
               {owner}
-            <h1 className='members-dropdown--header'>Contributors</h1>
+            <h1 className='members-dropdown--header contributors-header'>Contributors</h1>
               {sharedWith.splice(1)}
           </div>
         )}

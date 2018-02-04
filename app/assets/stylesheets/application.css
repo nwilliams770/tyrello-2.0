@@ -1180,6 +1180,10 @@ input {
   display: table;
 }
 
+.contributors-header {
+  margin-top: 5%;
+}
+
 .members-share--header:hover {
   transition: 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.4);
@@ -1203,6 +1207,12 @@ input {
 
 .share-bttn:focus {
   outline: none;
+}
+
+.shared-with--item {
+  font-family: "Lato", sans-serif;
+  margin-left: 5%;
+  margin-bottom: 3%;
 }
 
 .board-header--dropdown {
