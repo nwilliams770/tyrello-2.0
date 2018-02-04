@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 import BoardsIndexItem from './boards_index_item';
 import ToolBarContainer from '../toolbar/toolbar_container';
@@ -13,19 +15,19 @@ class BoardsIndex extends React.Component {
   }
   componentDidMount() {
     this.props.fetchBoards();
-    // const sComp = this.props.currentUser.slice(-1) === 's' ? "'" : "'s";
-    // document.title = `${this.props.currentUser}${sComp} Boards | Tyrello`;
+    
     document.title = 'Boards | Tyrello';
   }
 
   render() {
-    const personalBoards = this.props.personalBoards.map((board) => (
+      const personalBoards = this.props.personalBoards.map((board) => (
       <BoardsIndexItem key={board.id} board={board} />
     ));
 
-    const sharedBoards = this.props.sharedBoards.map((board) => (
+      const sharedBoards = this.props.sharedBoards.map((board) => (
       <BoardsIndexItem key={board.id} board={board} />
     ));
+  
     
     return (
       <div className='bg--signup-login'>
@@ -38,10 +40,17 @@ class BoardsIndex extends React.Component {
                  className='board--icons' />
             <h1> Personal Boards </h1>
           </div>
-          <ul className='boards--list slide-up-fade-in--boards'>
-            {personalBoards}
-            <NewBoardFormContainer />
-          </ul>
+          <ReactCSSTransitionGroup
+            component="div"
+            transitionName="fade"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
+            <ul className='boards--list slide-up-fade-in--boards'>
+              {personalBoards}
+               <NewBoardFormContainer />
+            </ul>
+          </ReactCSSTransitionGroup>
+         
 
           <div className='header--shared'>
             <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516661862/multiple-users-silhouette_erlndp.svg'
