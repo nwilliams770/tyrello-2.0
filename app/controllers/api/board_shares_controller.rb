@@ -26,8 +26,11 @@ class Api::BoardSharesController < ApplicationController
     @owner = @board.user
     @shares = [BoardShare.find_by(board_id: params[:id])]
     @shared_withs = [@owner]
-    @shares.each {|board_share| @shared_withs << board_share.user }
-    
+    if !(@shares[0].nil?)
+      @shares.each {|board_share| @shared_withs << board_share.user }
+    else
+      @shares = []
+    end
     render :show
   end
 

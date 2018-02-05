@@ -32,7 +32,7 @@ class SessionDropdown extends React.Component {
   }
 
   render() {
-    const userImage = this.props.currentUser.username === 'Sansa-Stark' ? 
+    const userImage = this.props.currentUser.username === 'Olenna-Tyrell' ? 
       <div onClick={this.handleClick} className='session-img--container'> <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_50/v1516744926/OlennaTyrell_vldewo.jpg' /> </div>
       : <div onClick={this.handleClick} className='session-img--container'> <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516744890/MargeryTyrell_wxjv0t.jpg' /> </div>;
 

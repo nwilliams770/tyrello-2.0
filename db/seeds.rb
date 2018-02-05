@@ -31,7 +31,7 @@ user24 = User.create(username: "Tyrene-Sand", email: "Tyrene-Sand@me.com", passw
 user25 = User.create(username: "The-Hound", email: "The-Hound@me.com", password: "password25")
 user26 = User.create(username: "The-Mountain", email: "The-Mountain@me.com", password: "password26")
 user27 = User.create(username: "Ser-Ilyn-Payne", email: "Ser-Ilyn-Payne@me.com", password: "password27")
-user28 = User.create(username: "Ser-Ilyn-Payne", email: "Ser-Ilyn-Payne@me.com", password: "password28")
+user28 = User.create(username: "Ser-Meryn-Trant", email: "Meryn@me.com", password: "password28")
 user29 = User.create(username: "Grey-Worm", email: "Grey-Worm@me.com", password: "password29")
 user30 = User.create(username: "Thoros-Of-Myr", email: "Thoros-Of-Myr@me.com", password: "password30")
 user31 = User.create(username: "Ser-Beric-Dondarrion", email: "Ser-Beric-Dondarrion@me.com", password: "password31")
@@ -127,38 +127,16 @@ card27 = Card.create(title: "That Creepy Maester Who Follows Cersei Around", lis
 card28 = Card.create(title: "Euron", list_id: list10.id)
 
 
+BoardShare.create(board_id: board4.id, contributor_id: user1.id)
+BoardShare.create(board_id: board4.id, contributor_id: user41.id)
+BoardShare.create(board_id: board4.id, contributor_id: user44.id)
+BoardShare.create(board_id: board4.id, contributor_id: user14.id)
+BoardShare.create(board_id: board4.id, contributor_id: user15.id)
+BoardShare.create(board_id: board4.id, contributor_id: user21.id)
+
+BoardShare.create(board_id: board1.id, contributor_id: user8.id)
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-card7 = Card.create(title: "Joffrey", list_id: list2.id)
-card8 = Card.create(title: "Meryn Trant", list_id: list2.id)
-card9 = Card.create(title: "Walder Frey", list_id: list2.id)
-card10 = Card.create(title: "Cersei", list_id: list4.id)
-card11 = Card.create(title: "Ilyn Payne", list_id: list4.id)
-card12 = Card.create(title: "The Red Woman", list_id: list4.id)
-
-BoardShare.create(board_id: board1.id, contributor_id: user1.id)
