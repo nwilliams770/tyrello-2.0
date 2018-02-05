@@ -16,7 +16,7 @@ export default ({ searchItems, firstTime, searchVal, currentUser,
       );
   } else if (firstTime === false) {
     listItems =
-      <li>No matchings users</li>;
+      <li id='user-search--notfound'>No matchings users</li>;
   }
   return (
     <ul className="UserSearchIndex">

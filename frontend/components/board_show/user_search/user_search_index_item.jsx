@@ -20,11 +20,9 @@ class UserSearchIndexItem extends React.Component {
 
   render() {
     return (
-      <li onClick={this.handleClick}>
-
-          <img src={this.user.img_url} />
-          <p>{"@" + this.user.username}</p>
-
+      <li className='user-search--items' onClick={this.handleClick}>
+          {/* <img src={this.user.img_url} /> */}
+          <p>{this.user.username}</p>
       </li>
     );
   }
