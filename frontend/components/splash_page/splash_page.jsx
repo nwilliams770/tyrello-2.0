@@ -18,7 +18,7 @@ class SplashPage extends React.Component {
       fadeOuts[i].classList.add('slide-up-fade-in-reverse');
     }
 
-    setTimeout(function () {this.props.login({ username: 'Sansa-Stark', password: 'password' }); }.bind(this), 1250);
+    setTimeout(function () {this.props.login({ username: 'Olenna-Tyrell', password: 'password' }); }.bind(this), 1250);
   }
 
   render() {
@@ -39,7 +39,7 @@ class SplashPage extends React.Component {
           <div className='splash--links slide-up-fade-in'>
             <p> Already have an account? <Link className='link' to="/login"> Log in here </Link> </p>
             <p> Otherwise, you can <Link className='link' to="/signup"> Sign up here </Link> </p>
-            <p> Ain't got time for all that? Click the demo button below: </p>
+            <p> In a rush? Click the demo button below: </p>
           </div>
           <button className='session-button slide-up-fade-in' onClick={this.demoLogin} > DEMO </button>          
         </div>
