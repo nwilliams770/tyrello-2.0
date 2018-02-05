@@ -1227,6 +1227,7 @@ input {
   box-sizing: border-box;
   margin-left: -7%;
   margin-top: 0.5%;
+  overflow: scroll;
 }
 
 .board-header--dropdown:hover {
@@ -1259,6 +1260,7 @@ input {
   box-sizing: border-box;
   margin-top: 0.5%;
   margin-left: -12%;
+  overflow: scroll;
 }
 
 #user-search-input {
