@@ -79,7 +79,7 @@ class EditCardForm extends React.Component {
   }
 
   render() {
-
+    const title = this.props.title;    
 
     return (
       <div ref={node => { this.node = node; }} >
@@ -88,7 +88,7 @@ class EditCardForm extends React.Component {
           <div>
             <form id='edit-list--form'>
               <p id='delete-list-dropdown--button' onClick={this.handleDelete}>Delete Card</p>
-              <input autoFocus id='edit-list--input' onChange={this.handleChange('title')} defaultValue='TEST' />
+              <input autoFocus id='edit-list--input' onChange={this.handleChange('title')} defaultValue={title} />
             </form>
           </div>
         )}

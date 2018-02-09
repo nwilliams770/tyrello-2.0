@@ -82,7 +82,7 @@ class EditBoardForm extends React.Component {
             <h1 id='list-form--header'> Rename board </h1>
             <hr id="board-form--underline" />
             <form>
-              <input id='list-form--input'
+              <input autoFocus id='list-form--input'
                 onChange={this.handleChange('name')}
                 defaultValue={name} />
               <button id='list-form--submit' onClick={this.handleSubmit}>Rename</button>

@@ -75,7 +75,7 @@ class NewBoardForm extends React.Component {
             <hr id="board-form--underline" />
             <form>
               <label>
-                <input id="board-form--input"
+                <input autoFocus id="board-form--input"
                   onChange={this.handleChange('name')}
                   placeholder="Name"
                   value={this.state.name} />
@@ -90,34 +90,3 @@ class NewBoardForm extends React.Component {
 }
 
 export default withRouter(NewBoardForm);
-
-{/* <div className="board-form-parent" ref={node => { this.node = node; }} >
-  <li className="create-board">
-    <button onClick={this.handleClick} className="create-board-button">
-      <div className="create-board-copy">
-        Create a new board...
-            </div>
-    </button>
-  </li>
-  {this.state.visible && (
-    <div className='board-form-container'>
-      <div className="board-form-header">
-        <div className="board-form-header-copy">
-          Create Board
-              </div>
-        <button className="form-exit-button" onClick={this.handleClick}>&#10005;</button>
-      </div>
-      <hr className="board-form-underline" />
-      <form>
-        <label>
-          <input className="new-board-input"
-            onChange={this.handleChange('name')}
-            placeholder="Name"
-            value={this.state.name} />
-        </label>
-        <button className="new-board-submit"
-          onClick={this.handleSubmit}>Create</button>
-      </form>
-    </div>
-  )}
-</div> */}

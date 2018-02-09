@@ -69,7 +69,7 @@ class NewListForm extends React.Component {
             <h1 id='list-form--header'> Create list </h1>
             <hr id="board-form--underline" />
             <form>
-              <input id='list-form--input'
+              <input autoFocus id='list-form--input'
                 onChange={this.handleChange('title')}
                 placeholder="Title"
                 value={this.state.title} />

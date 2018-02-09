@@ -24,16 +24,18 @@ class Api::CardsController < ApplicationController
   def update
     @card = Card.find(params[:id])
     @card.title = params[:card][:title]
-    @card.list_id = params[:card][:list_id]
-    @card.save!
+    if params[:card][:list_id]
+      @card.list_id = params[:card][:list_id]
+    end 
     
-    @board = (List.find(params[:card][:list_id])).board
+    @board = @card.list.board
     @lists = @board.lists
-    @cards = []
     @list_ids = []
-    
-    @lists.each {|list| @list_ids << list.id }
-    render :show
+ 
+
+    if @card.save!
+      render :show
+    end
   end
 
   def destroy

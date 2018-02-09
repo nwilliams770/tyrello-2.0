@@ -70,7 +70,7 @@ class NewCardForm extends React.Component {
             <h1 id='new-card-form--header'> Add a card </h1>
             <hr id="board-form--underline" />
             <form id='new-card-form'>
-              <textarea id='card-form--textarea' onChange={this.handleChange('title')}
+              <textarea autoFocus id='card-form--textarea' onChange={this.handleChange('title')}
                 placeholder="Title"
                 value={this.state.title} />
               <button id='card-form--submit' onClick={this.handleSubmit}>Add</button>
