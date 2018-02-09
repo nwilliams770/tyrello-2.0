@@ -99,6 +99,8 @@
   display: flex;
   align-items: center;
   color: $darkgreen;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 .card-item--title {
