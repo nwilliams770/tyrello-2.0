@@ -48,7 +48,7 @@ class EditCardForm extends React.Component {
     if (params.title === "") {
       return;
     }
-    this.props.editCard(params).then(this.props.onUpdate(this.state.title));
+    this.props.editCard(params);
     this.handleClick();
   }
 
@@ -83,12 +83,28 @@ class EditCardForm extends React.Component {
 
     return (
       <div ref={node => { this.node = node; }} >
-        <h1 className='list-item--title' onClick={this.handleClick}> TEST </h1>
+        <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1518143644/pencil-edit-button_xosvld.svg'
+                  height='20px'
+                  width='20px'
+                  onClick={this.handleClick}
+                  id='edit-card--button' />
         {this.state.visible && (
-          <div>
-            <form id='edit-list--form'>
-              <p id='delete-list-dropdown--button' onClick={this.handleDelete}>Delete Card</p>
-              <input autoFocus id='edit-list--input' onChange={this.handleChange('title')} defaultValue={title} />
+          <div className='edit-card--container'>
+            <img src='http://res.cloudinary.com/nwilliams770/image/upload/c_scale,w_10/v1516671380/X-icon_ytjbme.svg'
+              width='17px'
+              height='17px'
+              id='new-board-form--exit'
+              onClick={this.handleClick} />
+            <h1 id='new-card-form--header'> Edit card </h1>
+            <hr id="board-form--underline" />
+            <form id='new-card-form'>
+              <textarea autoFocus id='card-form--textarea' 
+                                  onChange={this.handleChange('title')}
+                                  defaultValue={title} />
+              <div className='edit-card--buttons'>
+                <button className='edit-card--submit' onClick={this.handleSubmit}>Update</button>
+                <button className='edit-card--submit' onClick={this.handleDelete}>Delete</button>
+              </div>
             </form>
           </div>
         )}

@@ -101,6 +101,14 @@
   color: $darkgreen;
   box-sizing: border-box;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item--container:hover {
+  transition: 0.3s ease-in-out;
+  cursor: move;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .card-item--title {

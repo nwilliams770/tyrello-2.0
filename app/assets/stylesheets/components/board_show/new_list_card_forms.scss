@@ -82,6 +82,7 @@
 #list-form--submit:hover {
   transition: 0.3s ease-in;
   background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 #list-form--submit:focus {
@@ -121,7 +122,7 @@
   background: $green;
   border-radius: 3px;
   z-index: 50;
-  margin-top: -10.8%;
+  margin-top: -11%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,6 +130,7 @@
   font-family: $body-font;
   font-size: 18px;
   position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);  
 }
 
 #new-card-form--header {
@@ -180,6 +182,7 @@
 #card-form--submit:hover {
   transition: 0.3s ease-in;
   background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 
 #card-form--submit:focus {
