@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 
 import BoardsIndexItem from './boards_index_item';
 import ToolBarContainer from '../toolbar/toolbar_container';
@@ -40,18 +38,10 @@ class BoardsIndex extends React.Component {
                  className='board--icons' />
             <h1> Personal Boards </h1>
           </div>
-          <ReactCSSTransitionGroup
-            component="div"
-            transitionName="fade"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
             <ul className='boards--list slide-up-fade-in--boards'>
               {personalBoards}
                <NewBoardFormContainer />
             </ul>
-          </ReactCSSTransitionGroup>
-         
-
           <div className='header--shared'>
             <img src='http://res.cloudinary.com/nwilliams770/image/upload/v1516661862/multiple-users-silhouette_erlndp.svg'
                  height='25px'
