@@ -34,3 +34,7 @@ export const createCard = (params) => dispatch => (
 export const editCard = (params) => dispatch => (
   APIUtil.editCard(params).then(cards => dispatch(receiveUpdatedCards(cards)))
 );
+
+export const deleteCard = (id) => dispatch => (
+  APIUtil.deleteCard(id).then(cards => dispatch(receiveUpdatedCards(cards)))
+);

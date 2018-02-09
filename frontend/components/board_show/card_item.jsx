@@ -1,5 +1,5 @@
 import React from 'react';
-
+import EditCardFormContainer from './edit_card/edit_card_form_container';
 import PropTypes from 'prop-types';
 import { DragSource } from 'react-dnd';
 import { ItemTypes } from '../../util/dnd';
@@ -36,6 +36,7 @@ class CardItem extends React.Component {
     return connectDragSource(
       <div className='card-item--container'>
         <h1 className='card-item--title'> {card.title} </h1>
+        <EditCardFormContainer id={card.id} title={card.title}/>
       </div>
     );
   }

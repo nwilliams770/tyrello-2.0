@@ -862,6 +862,8 @@ input {
   display: flex;
   align-items: center;
   color: #799649;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 .card-item--title {

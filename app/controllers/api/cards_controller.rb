@@ -36,6 +36,20 @@ class Api::CardsController < ApplicationController
     render :show
   end
 
+  def destroy
+
+    @card = Card.find(params[:id])
+    @board = @card.list.board
+    @card.destroy!
+
+    @lists = @board.lists
+    @cards = []
+    @list_ids = []
+    
+    @lists.each {|list| @list_ids << list.id }
+    render :show
+  end
+
   private
   def card_params
     params.require(:card).permit(:title, :list_id, :id)
