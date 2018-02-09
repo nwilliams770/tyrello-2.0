@@ -10,12 +10,14 @@ class UserSearchIndexItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.userId = props.userId;
     this.currentBoardId = props.currentBoardId;
+
   }
 
   handleClick(e) {
     e.preventDefault();
     const params = {board_id: this.currentBoardId, contributor_id: this.userId};
     this.props.shareBoard(params);
+
   }
 
   render() {

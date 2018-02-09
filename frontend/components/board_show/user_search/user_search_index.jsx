@@ -2,7 +2,7 @@ import React from 'react';
 import UserSearchIndexItem from './user_search_index_item';
 
 export default ({ searchItems, firstTime, searchVal, currentUser,
-   currentBoardId, shareBoard, fetchShared, handleShare }) => {
+   currentBoardId, shareBoard, fetchShared, handleShare, handleOutsideClick }) => {
   if (searchVal === "") return (<ul className="UserSearchIndex"></ul>);
 
   let listItems;

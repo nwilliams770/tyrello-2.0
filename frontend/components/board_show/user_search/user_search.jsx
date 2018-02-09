@@ -63,7 +63,8 @@ class UserSearch extends React.Component {
             currentBoardId={this.props.match.params.id}
             shareBoard={this.props.shareBoard}
             fetchShared={this.props.fetchShared}
-            handleShare={this.handleSharedWith} />
+            handleShare={this.handleSharedWith} 
+            handleOutsideClick={this.handleOutsideClick} />
         </div>
        )}
       </div>
