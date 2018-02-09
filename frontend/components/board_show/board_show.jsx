@@ -5,6 +5,8 @@ import NewListFormContainer from './new_list_form/new_list_form_container';
 import EditBoardFormContainer from './edit_board/edit_board_form_container';
 import MembersDropdownContainer from './members_dropdown/members_dropdown_container';
 import UserSearchContainer from './user_search/user_search_container';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 
 class BoardShow extends React.Component {
   constructor(props) {
@@ -15,6 +17,16 @@ class BoardShow extends React.Component {
   };
 
   this.handleDelete = this.handleDelete.bind(this);
+  this.updateCard = this.updateCard.bind(this);
+  }
+
+  updateCard(cardId, listId, title) {
+    let card = {
+      id: cardId,
+      list_id: listId,
+      title: title,
+    };
+    this.props.editCard(card);
   }
 
   componentDidMount() {
@@ -63,7 +75,9 @@ class BoardShow extends React.Component {
       const cards = this.props.cards.byListId[list.id] === undefined ? [] : this.props.cards.byListId[list.id];
       return <ListItem key={list.id}
                        list={list}
-                       cards={cards} />;
+                       cards={cards}
+                       listId={list.id}
+                       updateCard={this.updateCard} />;
     });
       
     return (
@@ -102,4 +116,4 @@ class BoardShow extends React.Component {
   }
 }
 
-export default BoardShow;
+export default DragDropContext(HTML5Backend)(BoardShow);

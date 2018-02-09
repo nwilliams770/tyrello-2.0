@@ -17,20 +17,23 @@ class Api::CardsController < ApplicationController
     @cards = []
     @list_ids = []
     
-    @lists.each do |list|
-      @list_ids << list.id
-      list.cards.each {|card| @cards << card}
-    end
+    @lists.each {|list| @list_ids << list.id }
     render :show
   end
 
   def update
-    @card = Card.find(params[:card_id])
-    @card.title = params[:title]
-    @card.list_id = params[:list_id]
+    @card = Card.find(params[:id])
+    @card.title = params[:card][:title]
+    @card.list_id = params[:card][:list_id]
     @card.save!
-    @list_id = params[:list_id]
-    render :update
+    
+    @board = (List.find(params[:card][:list_id])).board
+    @lists = @board.lists
+    @cards = []
+    @list_ids = []
+    
+    @lists.each {|list| @list_ids << list.id }
+    render :show
   end
 
   private

@@ -5,6 +5,9 @@ import { fetchLists } from '../../actions/list_actions';
 import { fetchCards } from '../../actions/card_actions';
 import { fetchBoards, deleteBoard } from '../../actions/board_actions';
 import { selectLists, selectPersonalBoards} from '../../reducers/selectors';
+import { editCard } from '../../actions/card_actions';
+
+
 
 
 import BoardShow from './board_show';
@@ -19,7 +22,8 @@ const mapDispatchToProps = dispatch => ({
   fetchLists: (id) => dispatch(fetchLists(id)),
   fetchCards: (id) => dispatch(fetchCards(id)),
   fetchBoards: () => dispatch(fetchBoards()),
-  deleteBoard: (id) => dispatch(deleteBoard(id))
+  deleteBoard: (id) => dispatch(deleteBoard(id)),
+  editCard: (card) => dispatch(editCard(card))
 });
 
 export default withRouter(connect(

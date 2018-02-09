@@ -15,7 +15,7 @@ export const createCard = card => (
 
 export const editCard = card => (
   $.ajax({
-    method: 'PATH',
+    method: 'PATCH',
     url: `api/cards/${card.id}`,
     data: { card }
   })

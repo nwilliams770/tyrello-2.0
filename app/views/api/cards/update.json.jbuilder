@@ -1,5 +1,5 @@
 json.byListId do
-  json.set! list.id do
-      json.array! @card
+  json.set! @list_id do
+      [@card]
   end
 end
