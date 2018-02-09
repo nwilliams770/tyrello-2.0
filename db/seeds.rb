@@ -105,7 +105,7 @@ card20 = Card.create(title: "Ask Danaerys To Roast Her Like Tarly", list_id: lis
 
 list7 = List.create(title: 'Gardening Endeavors', board_id: board3.id)
 
-card21 = Card.create(title: "Plant Bulbs Before Wonter", list_id: list7.id)
+card21 = Card.create(title: "Plant Bulbs Before Winter", list_id: list7.id)
 card22 = Card.create(title: "Finish Harvest", list_id: list7.id)
 card23 = Card.create(title: "Redo Hedge Maze..It's Turri-bull", list_id: list7.id)
 
