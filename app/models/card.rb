@@ -4,5 +4,5 @@ class Card < ApplicationRecord
     foreign_key: :list_id,
     class_name: :List
 
-    default_scope { order("created_at DESC") }
+    default_scope { order("created_at ASC") }
 end
