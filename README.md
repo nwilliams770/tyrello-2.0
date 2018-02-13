@@ -2,7 +2,7 @@
 
 [Visit the live site](http://www.tyrello.co/#/)
 
-Tyrello is a full-stack project organization web application that allows users to compartmentalize large projects into meaningful lists and tasks. As collaboration is key to any successful project, Tyrello users can share project boards amongst users resulting in universal visibility and editability. Tyrello was inspired by and modeled after Trello, with some minor UI/UX modifications. 
+Tyrello is a full-stack project organization web application that allows users to compartmentalize large projects into meaningful lists and tasks. User to user collaboration is the crux to any successful project and following that ideology, Tyrello users can share project boards amongst users resulting in universal visibility and editability. Tyrello was inspired by and modeled after Trello.
 
 ### Features
 
