@@ -30,7 +30,7 @@ Users also have the ability to bring collaborators onto their boards. This is ac
 ![BoardShare](https://github.com/nwilliams770/tyrello-2.0/blob/master/app/assets/images/BoardShare.gif)
 
 ### Drag and Drop
-Integrating drag and drop functionality into Card and List components permits the user flexibility for card re-assignment. When a card has been successfully dropped to a new list, the database is updated to maintain the necessary Active Record associations. To prevent unncessary calls to the backend, an API is sent only when a card is dropped into a new list.
+Integrating drag and drop functionality into Card and List components permits the user flexibility for card re-assignment. When a card has been successfully dropped to a new list, the database is updated to maintain the necessary Active Record associations. To prevent unnecessary calls to the backend, an API call is made only when a card is dropped into a new list.
 
 ![DragAndDrop](https://github.com/nwilliams770/tyrello-2.0/blob/master/app/assets/images/DragAndDrop.gif)
 
