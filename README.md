@@ -1,6 +1,6 @@
 # Tyrello
 
-[Visit the live site](http://www.tyrello.co/#/)
+[Visit the live site](https://tyrello-2.herokuapp.com/)
 
 Tyrello is a full-stack project organization web application that allows users to compartmentalize large projects into meaningful lists and tasks. User to user collaboration is the crux to any successful project and following that ideology, Tyrello users can share project boards amongst users resulting in universal visibility and editability. Tyrello was inspired by and modeled after Trello.
 
@@ -63,4 +63,4 @@ Future Development
   - Improve upon drag and drop functionality to allow users to reorder cards and lists
   - Replace current transition implementation with [React Transition Group](https://github.com/reactjs/react-transition-group) for more       dynamic in/out transitions
 
-[Visit the live site](http://www.tyrello.co/#/)
+[Visit the live site](https://tyrello-2.herokuapp.com/)
